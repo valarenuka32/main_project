@@ -1,6 +1,6 @@
 const express = require("express");
-const { restauranttypeController } = require("../validations");
-const { restauranttypeValidation } = require("../controllers");
+const { restauranttypeController } = require("../controllers");
+const { restauranttypeValidation } = require("../validations");
 const validate = require("../middlewares/validate");
 
 const router = express.Router();
@@ -21,12 +21,12 @@ router.get(
 // update
 router.put(
     "/update:restauranttypeId",
-    restauranttypeController.updateRestauranttype
+    restauranttypeController.updateRecode
 );
 
 // delete
 router.delete(
     "/delete:restauranttypeId",
-    restauranttypeController.deleteRestauranttype
+    restauranttypeController.deleteRecode
 );
 module.exports = router;
