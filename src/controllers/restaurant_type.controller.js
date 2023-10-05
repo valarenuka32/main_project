@@ -22,11 +22,11 @@ const createRestauranttype = async (req, res) => {
 // Restauranttype list
 const restauranttypeList = async (req, res) => {
     try {
-        const getlist = await restauranttypeService.restauranttypeList();
+        const getList = await restauranttypeService.restauranttypeList();
         res.status(200).json({
             success: true,
             message: "Restauranttype List Create Successfully",
-            data: { getlist }
+            data: { getList }
         })
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
