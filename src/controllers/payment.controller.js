@@ -30,12 +30,12 @@ const paymentList = async (req, res) => {
 };
 
 // update 
-const updateRecode=async(req,res)=>{
-try {
-    
-} catch (error) {
+const updateRecode = async (req, res) => {
+    try {
 
-}
+    } catch (error) {
+
+    }
 };
 
 module.exports = {
