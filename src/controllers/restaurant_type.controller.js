@@ -8,7 +8,7 @@ const createRestauranttype = async (req, res) => {
         const restauranttype = await restauranttypeService.createRestauranttype(reqBody);
         res.status(200).json({
             success: true,
-            message: "restauranttype create successfully!",
+            message: "Restauranttype Create Successfully!",
             data: { restauranttype }
         });
     } catch (error) {
@@ -25,7 +25,7 @@ const restauranttypeList = async (req, res) => {
         const getlist = await restauranttypeService.restauranttypeList();
         res.status(200).json({
             success: true,
-            message: "restauranttype list create successfully",
+            message: "Restauranttype List Create Successfully",
             data: { getlist }
         })
     } catch (error) {
@@ -36,15 +36,15 @@ const restauranttypeList = async (req, res) => {
 // update
 const updateRecode = async (req, res) => {
     try {
-        const restauranttypeId = res.params.req.body;
+        const restauranttypeId = res.params.restauranttypeId;
         const restaurantEx = await restauranttypeService.getrestauranttypeById(restauranttypeId);
         if (!restaurantEx) {
-            throw new Error("Restaurant type is not found");
+            throw new Error("Restaurant Type not found");
         }
         await restauranttypeService.updateRecode(restauranttypeId, req.Body);
         res.status(200).json({
             success: true,
-            message: "Restaurant type update successfully!",
+            message: "Restaurant Type Update Successfully!",
         });
     } catch (error) {
         res.status(400).json({
@@ -57,16 +57,16 @@ const updateRecode = async (req, res) => {
 // delete
 const deleteRecode = async (req, res) => {
     try {
-        const restauranttypeId = req.params.req.Body;
-        const restaurantEx = await restauranttypeId.getrestauranttypeById(restauranttypeId);
+        const restauranttypeId = req.params.restauranttypeId;
+        const restaurantEx = await restauranttypeService.getrestauranttypeById(restauranttypeId);
         if (!restaurantEx) {
-            throw new Error("Restaurant type is not found");
+            throw new Error("Restaurant Type is not found");
         }
 
-        await restauranttypeId.deleteRecode(restauranttypeId);
+        await restauranttypeService.deleteRecode(restauranttypeId);
         res.status(200).json({
             success: true,
-            message: "Restaurant type delete successfully!",
+            message: "Restaurant Type Delete Successfully!",
         });
     } catch (error) {
         res.status(400).json({

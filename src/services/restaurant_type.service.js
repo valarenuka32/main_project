@@ -1,6 +1,10 @@
 const { restauranttype } = require("../model");
 
-// restauranttype create
+/**
+ * Create restaurant type
+ * @param {object} reqBody
+ * @returns {Promise<User>}
+ */
 
 const createRestauranttype = async (reqBody) => {
     return restauranttype.create(reqBody);

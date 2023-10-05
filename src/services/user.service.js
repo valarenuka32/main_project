@@ -1,5 +1,11 @@
 const { user } = require("../model");
 
+/**
+ * Create user
+ * @param {object} reqBody
+ * @returns {Promise<user>}
+ */
+
 const createUser = async (reqBody) => {
     return user.create(reqBody)
 };

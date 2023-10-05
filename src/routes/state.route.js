@@ -17,12 +17,12 @@ router.get(
 );
 // update
 router.put(
-    "/update-recode",
+    "/update-recode:startId",
     stateController.updateRecode
 );
 // delete
 router.delete(
-    "/delete-recode",
+    "/delete-recode:startId",
     stateController.deleteRecode
 );
 
