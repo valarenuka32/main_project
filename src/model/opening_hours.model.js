@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const openinghoursSchema = new mongoose.model(
+const openinghoursSchema = new mongoose.Schema(
     {
         open_time: {
             type: String,

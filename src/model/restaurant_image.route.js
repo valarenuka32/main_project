@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const restaurantimgSchema = new mongoose.Schem(
+const restaurantimgSchema = new mongoose.Schema(
     {
         restaurant_image: {
             type: String,

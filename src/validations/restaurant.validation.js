@@ -5,7 +5,7 @@ const createRestaurant = {
     body: Joi.object().keys({
         restaurant_name: Joi.string().trim().required(),
         restaurant_address: Joi.string().trim().required(),
-        restaurant_contect_no: Joi.number().required(),
+        restaurant_contect_no: Joi.number().integer(),
     })
 };
 module.exports = {
