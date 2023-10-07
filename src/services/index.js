@@ -19,4 +19,3 @@ module.exports.deliveryaddressesService = require("./delivery_addresses.service"
 module.exports.deliverydriversService = require("./delivery_drivers.service");
 module.exports.deliveriesService = require("./deliveries.service");
 module.exports.commentService = require("./comment.service");
-module.exports.reviewService = require("./review.service");
