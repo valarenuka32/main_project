@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const DeliveryAddressesSchema = new mongoose.Schema(
+const deliveryAddressesSchema = new mongoose.Schema(
     {
         street_address: {
             type: String,
@@ -29,5 +29,5 @@ const DeliveryAddressesSchema = new mongoose.Schema(
     }
 );
 
-const DeliveryAddresses = mongoose.model("DeliveryAddresses", DeliveryAddressesSchema);
+const DeliveryAddresses = mongoose.model("DeliveryAddresses", deliveryAddressesSchema);
 module.exports = DeliveryAddresses;

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const DeliveriesSchema = new mongoose.Schema(
+const deliveriesSchema = new mongoose.Schema(
     {
         status: {
             type: String,
@@ -29,5 +29,5 @@ const DeliveriesSchema = new mongoose.Schema(
     }
 );
 
-const Deliveries = mongoose.model("Deliveries", DeliveriesSchema);
+const Deliveries = mongoose.model("Deliveries", deliveriesSchema);
 module.exports = Deliveries;

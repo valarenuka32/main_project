@@ -1,28 +1,28 @@
-const { country } = require("../model");
+const { Country } = require("../model");
 
 /**
  * Create country
  * @param {object} reqBody
- * @returns {Promise<country>}
+ * @returns {Promise<User>}
  */
 
 const createCountry = async (reqBody) => {
-    return country.create(reqBody);
+    return Country.create(reqBody);
 };
 const countryList = async (req, res) => {
-    return country.find();
+    return Country.find();
 };
 
 const getcountryById = async (countryId) => {
-    return country.findById(countryId);
+    return Country.findById(countryId);
 };
 
 const updateRecode = async (countryId, updateBody) => {
-    return country.findByIdAndUpdate(countryId, { $set: updateBody });
+    return Country.findByIdAndUpdate(countryId, { $set: updateBody });
 };
 
 const deleteRecode = async (countryId) => {
-    return country.findByIdAndDelete(countryId);
+    return Country.findByIdAndDelete(countryId);
 };
 
 module.exports = {

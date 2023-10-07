@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const DeliverydriversSchema = new mongoose.Schema(
+const deliverydriversSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -21,5 +21,5 @@ const DeliverydriversSchema = new mongoose.Schema(
     }
 );
 
-const Deliverydrivers = mongoose.model("Deliverydrivers", DeliverydriversSchema);
+const Deliverydrivers = mongoose.model("Deliverydrivers", deliverydriversSchema);
 module.exports = Deliverydrivers;
