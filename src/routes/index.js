@@ -6,6 +6,7 @@ const stateRouter = require("./state.route");
 const paymentRouter = require("./payment.route");
 const restaurantimgRouter = require("./restaurant_img.route");
 const orderRouter = require("./order.route");
+const openinghoursRouter = require("./opening_hours.route");
 
 const router = express.Router();
 
@@ -16,5 +17,6 @@ router.use("/state", stateRouter);
 router.use("/payment", paymentRouter);
 router.use("/restaurantimg", restaurantimgRouter);
 router.use("/order", orderRouter);
+router.use("/openinghours", openinghoursRouter);
 
 module.exports = router;

@@ -5,3 +5,4 @@ module.exports.stateController=require("./state.controller");
 module.exports.paymentController=require("./payment.controller");
 module.exports.restaurantimgController=require("./restaurant_img.controller");
 module.exports.orderController=require("./order.controller");
+module.exports.openinghoursController=require("./opening_hours.validation");

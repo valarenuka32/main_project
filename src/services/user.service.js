@@ -13,8 +13,8 @@ const userList = async (req, res) => {
     return user.find()
 };
 
-const getUserById = async (req, res) => {
-    return user.findById()
+const getUserById = async (userId) => {
+    return user.findById(userId)
 };
 
 const updateRecode = async (userId, updateBody) => {

@@ -13,8 +13,8 @@ const paymentList = async (req, res) => {
     return payment.find()
 };
 
-const getpaymentById = async (req, res) => {
-    return payment.findById()
+const getpaymentById = async (paymentId) => {
+    return payment.findById(paymentId)
 };
 
 const updateRecode = async (paymentId, updateBody) => {

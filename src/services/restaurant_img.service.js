@@ -13,8 +13,8 @@ const restaurantimgList = async (req, res) => {
     return restaurantimage.find()
 };
 
-const getrestaurantimgById = async (req, res) => {
-    return restaurantimage.findById()
+const getrestaurantimgById = async (restaurantimgId) => {
+    return restaurantimage.findById(restaurantimgId);
 };
 
 const updateRecode = async (restaurantimgId, updateBody) => {

@@ -13,8 +13,8 @@ const orderList = async (req, res) => {
     return order.find();
 };
 
-const getorderById = async (req, res) => {
-    return order.findById();
+const getorderById = async (orderId) => {
+    return order.findById(orderId);
 };
 
 const updateRecode = async (orderId, updateBody) => {
