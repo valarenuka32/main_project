@@ -1,28 +1,28 @@
-const { admin } = require("../model");
+const { Admin } = require("../model");
 
 /**
- * Create admin
+ * Create Admin
  * @param {object} reqBody
- * @returns {Promise<admin>}
+ * @returns {Promise<Admin>}
  */
 
 const createAdmin = async (reqBody) => {
-    return admin.create(reqBody);
+    return Admin.create(reqBody);
 };
 const adminList = async (req, res) => {
-    return admin.find();
+    return Admin.find();
 };
 
 const getadminById = async (adminId) => {
-    return admin.findById(adminId);
+    return Admin.findById(adminId);
 };
 
 const updateRecode = async (adminId, updateBody) => {
-    return admin.findByIdAndUpdate(adminId, { $set: updateBody });
+    return Admin.findByIdAndUpdate(adminId, { $set: updateBody });
 };
 
 const deleteRecode = async (adminId) => {
-    return admin.findByIdAndDelete(adminId);
+    return Admin.findByIdAndDelete(adminId);
 };
 
 module.exports = {
