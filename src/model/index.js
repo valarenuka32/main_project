@@ -8,3 +8,5 @@ module.exports.payment = require("./payment.model");
 module.exports.city = require("./city.model");
 module.exports.country = require("./country.model");
 module.exports.state = require("./state.model");
+module.exports.cart = require("./cart.model");
+module.exports.offer = require("./offer.model");
