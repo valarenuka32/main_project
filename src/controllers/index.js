@@ -11,3 +11,7 @@ module.exports.cityController=require("./city.controller");
 module.exports.adminController=require("./admin.controller");
 module.exports.itemController=require("./item.controller");
 module.exports.menuitemController=require("./menuitem.controller");
+module.exports.orderitemController=require("./order_item.controller");
+module.exports.cartController=require("./cart.controller");
+module.exports.offerController=require("./offer.controller");
+module.exports.offeritemController=require("./offer_item.controller");

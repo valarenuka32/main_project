@@ -4,7 +4,9 @@ const Joi = require("joi");
 const createOrder = {
     body: Joi.object().keys({
         order_data: Joi.date().required(),
-        totalamount:Joi.string().trim().required(),
+        total_price: Joi.string().trim().required(),
+        status: Joi.string().trim().required(),
+        User: Joi.string(),
     })
 };
 

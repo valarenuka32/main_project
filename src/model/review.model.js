@@ -14,13 +14,13 @@ const reviewSchema = new mongoose.Schema(
             type: Date,
             default: Date.now(),
         },
-        restaurant:{
+        Restaurant:{
             type:mongoose.Types.ObjectId,
-            ref:"restaurant"
+            ref:"Restaurant"
         },
-        user:{
+        User:{
             type:mongoose.Types.ObjectId,
-            ref:"user"
+            ref:"User"
         },
         is_active: {
             type: Boolean,

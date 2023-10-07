@@ -11,3 +11,7 @@ module.exports.cityService = require("./city.service");
 module.exports.adminService = require("./admin.service");
 module.exports.itemService = require("./item.service");
 module.exports.menuitemService = require("./menuitem.service");
+module.exports.orderitemService = require("./order_item.service");
+module.exports.cartService = require("./cart.service");
+module.exports.offerService = require("./offer.service");
+module.exports.offeritemService = require("./offer_item.service");

@@ -12,6 +12,10 @@ const cityRouter = require("./city.route");
 const adminRouter = require("./admin.route");
 const itemRouter = require("./item.route");
 const menuitemRouter = require("./menu_item.route");
+const orderitemRouter = require("./order_item.route");
+const cartRouter = require("./cart.route");
+const offerRouter = require("./offer.route");
+const offeritemRouter = require("./offer_item.route");
 
 const router = express.Router();
 
@@ -28,5 +32,9 @@ router.use("/city", cityRouter);
 router.use("/admin", adminRouter);
 router.use("/item", itemRouter);
 router.use("/menuitem", menuitemRouter);
+router.use("/orderitem", orderitemRouter);
+router.use("/cart", cartRouter);
+router.use("/offer", offerRouter);
+router.use("/offeritem", offeritemRouter);
 
 module.exports = router;

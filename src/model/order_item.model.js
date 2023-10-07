@@ -10,13 +10,13 @@ const orderitemSchema = new mongoose.Schema(
             type: Number,
             default: 0,
         },
-        order: {
+        Order: {
             type: mongoose.Types.ObjectId,
-            ref: "order",
+            ref: "Order",
         },
-        item: {
+        Item: {
             type: mongoose.Types.ObjectId,
-            ref: "item",
+            ref: "Item",
         },
     },
     {

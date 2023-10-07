@@ -11,3 +11,7 @@ module.exports.cityValidation= require("./city.validation");
 module.exports.adminValidation= require("./admin.validation");
 module.exports.itemValidation= require("./item.validation");
 module.exports.menuitemValidation= require("./menuitem.validation");
+module.exports.orderitemValidation= require("./order_item.validation");
+module.exports.cartValidation= require("./cart.validation");
+module.exports.offerValidation= require("./offer.validation");
+module.exports.offeritemValidation= require("./offer_item.validation");

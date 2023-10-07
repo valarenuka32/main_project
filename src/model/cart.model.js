@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 
 const cartSchema = new mongoose.Schema(
     {
-        items: {
+        item_name: {
             type: String,
-            default: 0
+            trim:true,
         },
         total_items: {
             type: Number,
@@ -15,12 +15,12 @@ const cartSchema = new mongoose.Schema(
             default: 0,
         },
         coupon_code: {
-            type: String,
-            trim: true,
+            type: Number,
+            default: 0,
         },
-        user: {
+        User: {
             type: mongoose.Types.ObjectId,
-            ref: "user",
+            ref: "User",
         },
     },
     {

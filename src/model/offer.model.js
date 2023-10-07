@@ -12,15 +12,19 @@ const offerSchema = new mongoose.Schema(
         },
         start_date: {
             type: Date,
-            default:Date.now(),
+            default: Date.now(),
         },
         end_date: {
             type: Date,
-            default:Date.now(),
+            default: Date.now(),
         },
         discount_percentage: {
             type: String,
             trim: true,
+        },
+        Restaurant: {
+            type: mongoose.Types.ObjectId,
+            ref: "Restaurant",
         },
         is_active: {
             type: Boolean,
@@ -33,5 +37,5 @@ const offerSchema = new mongoose.Schema(
     }
 );
 
-const offer = mongoose.model("offer", offerSchema);
-module.exports = offer;
+const Offer = mongoose.model("Offer", offerSchema);
+module.exports = Offer;

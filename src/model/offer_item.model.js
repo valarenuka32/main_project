@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 
 const offeritemSchema = new mongoose.Schema(
     {
-        offer: {
+        Offer: {
             type: mongoose.Types.ObjectId,
-            ref: "offer",
+            ref: "Offer",
         },
-        item: {
+        Item: {
             type: mongoose.Types.ObjectId,
-            ref: "item",
+            ref: "Item",
         },
         discounted_price: {
             type: Number,
