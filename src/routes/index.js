@@ -9,6 +9,7 @@ const orderRouter = require("./order.route");
 const openinghoursRouter = require("./opening_hours.route");
 const countryRouter = require("./country.route");
 const cityRouter = require("./city.route");
+const adminRouter = require("./admin.route");
 
 const router = express.Router();
 
@@ -22,5 +23,6 @@ router.use("/order", orderRouter);
 router.use("/openinghours", openinghoursRouter);
 router.use("/country", countryRouter);
 router.use("/city", cityRouter);
+router.use("/admin", adminRouter);
 
 module.exports = router;

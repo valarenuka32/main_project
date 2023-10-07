@@ -8,3 +8,4 @@ module.exports.orderValidation= require("./order.validation");
 module.exports.openinghoursValidation= require("./opening_hours.validation");
 module.exports.countryValidation= require("./country.validation");
 module.exports.cityValidation= require("./city.validation");
+module.exports.adminValidation= require("./admin.validation");

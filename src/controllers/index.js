@@ -8,3 +8,4 @@ module.exports.orderController=require("./order.controller");
 module.exports.openinghoursController=require("./opening_hours.controller");
 module.exports.countryController=require("./country.controller");
 module.exports.cityController=require("./city.controller");
+module.exports.adminController=require("./admin.controller");
