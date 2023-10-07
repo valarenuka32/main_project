@@ -22,14 +22,6 @@ const offerSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        minimum_order_amount: {
-            type: String,
-            trim: true,
-        },
-        maximum_discount_amount: {
-            type: String,
-            trim: true,
-        },
         is_active: {
             type: Boolean,
             default: false,

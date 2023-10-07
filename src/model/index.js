@@ -10,3 +10,7 @@ module.exports.country = require("./country.model");
 module.exports.state = require("./state.model");
 module.exports.cart = require("./cart.model");
 module.exports.offer = require("./offer.model");
+module.exports.offeritem = require("./offer_item.model");
+module.exports.item = require("./item.model");
+module.exports.menuitem = require("./menu_item.model");
+module.exports.review = require("./review.model");
