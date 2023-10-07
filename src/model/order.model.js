@@ -4,7 +4,7 @@ const orderSchema = new mongoose.Schema(
     {
         order_data: {
             type: Date,
-            trim: true,
+            default:Date.now(),
         },
         totalamount: {
             type: Number,

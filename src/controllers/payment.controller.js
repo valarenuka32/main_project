@@ -7,7 +7,7 @@ const createPayment = async (req, res) => {
         const payment = await paymentService.createPayment(reqBody);
         res.status(200).json({
             success: true,
-            message: "Patment create successfully!",
+            message: "payment create successfully!",
             data: { payment }
         });
     } catch (error) {
