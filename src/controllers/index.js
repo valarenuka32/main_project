@@ -7,3 +7,4 @@ module.exports.restaurantimgController=require("./restaurant_img.controller");
 module.exports.orderController=require("./order.controller");
 module.exports.openinghoursController=require("./opening_hours.controller");
 module.exports.countryController=require("./country.controller");
+module.exports.cityController=require("./city.controller");

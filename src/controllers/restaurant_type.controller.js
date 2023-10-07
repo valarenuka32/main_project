@@ -19,7 +19,7 @@ const createRestauranttype = async (req, res) => {
     }
 };
 
-// Restauranttype list
+// Restaurant type list
 const restauranttypeList = async (req, res) => {
     try {
         const getList = await restauranttypeService.restauranttypeList();

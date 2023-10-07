@@ -8,6 +8,7 @@ const restaurantimgRouter = require("./restaurant_img.route");
 const orderRouter = require("./order.route");
 const openinghoursRouter = require("./opening_hours.route");
 const countryRouter = require("./country.route");
+const cityRouter = require("./city.route");
 
 const router = express.Router();
 
@@ -20,5 +21,6 @@ router.use("/restaurantimg", restaurantimgRouter);
 router.use("/order", orderRouter);
 router.use("/openinghours", openinghoursRouter);
 router.use("/country", countryRouter);
+router.use("/city", cityRouter);
 
 module.exports = router;

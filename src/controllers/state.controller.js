@@ -16,7 +16,7 @@ const createState = async (req, res) => {
     }
 };
 
-// state list
+//get state list
 const stateList = async (req, res) => {
     try {
         const getList = await stateService.stateList();

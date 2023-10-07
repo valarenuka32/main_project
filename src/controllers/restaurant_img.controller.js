@@ -15,7 +15,7 @@ const createRestaurantimg = async (req, res) => {
     }
 };
 
-// list
+//restaurant img list
 const restaurantimgList = async (req, res) => {
     try {
         const getList = await restaurantimgService.restaurantimgList();

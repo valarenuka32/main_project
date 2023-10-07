@@ -7,3 +7,4 @@ module.exports.restaurantimgValidation= require("./restaurant_img.validation");
 module.exports.orderValidation= require("./order.validation");
 module.exports.openinghoursValidation= require("./opening_hours.validation");
 module.exports.countryValidation= require("./country.validation");
+module.exports.cityValidation= require("./city.validation");

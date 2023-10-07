@@ -16,7 +16,7 @@ const createCountry = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get country list
 const countryList = async (req, res) => {
     try {
         const getList = await countryService.countryList();

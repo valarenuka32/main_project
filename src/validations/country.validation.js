@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-// create state
+// create Country
 const createCountry = {
     body: Joi.object().keys({
         country_name: Joi().string().trim().required(),

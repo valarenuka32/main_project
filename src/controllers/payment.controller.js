@@ -15,7 +15,7 @@ const createPayment = async (req, res) => {
     }
 };
 
-// list
+//get payment list
 const paymentList = async (req, res) => {
     try {
         const getList = await paymentService.paymentList();
