@@ -1,34 +1,34 @@
-const { user } = require("../model");
+const { User } = require("../model");
 
 /**
- * Create user
+ * Create User
  * @param {object} reqBody
- * @returns {Promise<user>}
+ * @returns {Promise<User>}
  */
 
 const createUser = async (reqBody) => {
-    return user.create(reqBody)
+    return User.create(reqBody)
 };
 const userList = async (req, res) => {
-    return user.find()
+    return User.find()
 };
 
-const getUserById = async (userId) => {
-    return user.findById(userId)
+const getuserById = async (userId) => {
+    return User.findById(userId)
 };
 
 const updateRecode = async (userId, updateBody) => {
-    return user.findByIdAndUpdate(userId, { $set: updateBody });
+    return User.findByIdAndUpdate(userId, { $set: updateBody });
 };
 
 const deleteRecode = async (userId) => {
-    return user.findByIdAndDelete(userId);
+    return User.findByIdAndDelete(userId);
 };
 
 module.exports = {
     createUser,
     userList,
-    getUserById,
+    getuserById,
     updateRecode,
     deleteRecode
 }

@@ -1,28 +1,28 @@
-const { restaurantimage } = require("../model");
+const { Restaurantimage } = require("../model");
 
 /**
- * Create restaurantimg
+ * Create Restaurant img
  * @param {object} reqBody
- * @returns {Promise<restaurantimage>}
+ * @returns {Promise<User>}
  */
 
 const createRestaurantimg = async (reqBody) => {
-    return restaurantimage.create(reqBody)
+    return Restaurantimage.create(reqBody)
 };
 const restaurantimgList = async (req, res) => {
-    return restaurantimage.find()
+    return Restaurantimage.find()
 };
 
 const getrestaurantimgById = async (restaurantimgId) => {
-    return restaurantimage.findById(restaurantimgId);
+    return Restaurantimage.findById(restaurantimgId);
 };
 
 const updateRecode = async (restaurantimgId, updateBody) => {
-    return restaurantimage.findByIdAndUpdate(restaurantimgId, { $set: updateBody });
+    return Restaurantimage.findByIdAndUpdate(restaurantimgId, { $set: updateBody });
 };
 
 const deleteRecode = async (restaurantimgId) => {
-    return restaurantimage.findByIdAndDelete(restaurantimgId);
+    return Restaurantimage.findByIdAndDelete(restaurantimgId);
 };
 
 module.exports = {

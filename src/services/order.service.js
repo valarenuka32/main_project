@@ -1,28 +1,28 @@
-const { order } = require("../model");
+const { Order } = require("../model");
 
 /**
  * Create order
  * @param {object} reqBody
- * @returns {Promise<order>}
+ * @returns {Promise<User>}
  */
 
 const createOrder = async (reqBody) => {
-    return order.create(reqBody);
+    return Order.create(reqBody);
 };
 const orderList = async (req, res) => {
-    return order.find();
+    return Order.find();
 };
 
 const getorderById = async (orderId) => {
-    return order.findById(orderId);
+    return Order.findById(orderId);
 };
 
 const updateRecode = async (orderId, updateBody) => {
-    return order.findByIdAndUpdate(orderId, { $set: updateBody });
+    return Order.findByIdAndUpdate(orderId, { $set: updateBody });
 };
 
 const deleteRecode = async (orderId) => {
-    return order.findByIdAndDelete(orderId);
+    return Order.findByIdAndDelete(orderId);
 };
 
 module.exports = {

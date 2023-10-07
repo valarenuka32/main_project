@@ -1,28 +1,28 @@
-const { openinghours } = require("../model");
+const { Openinghours } = require("../model");
 
 /**
  * Create openinghours
  * @param {object} reqBody
- * @returns {Promise<openinghours>}
+ * @returns {Promise<User>}
  */
 
 const createOpeninghours = async (reqBody) => {
-    return openinghours.create(reqBody);
+    return Openinghours.create(reqBody);
 };
 const openinghoursList = async (req, res) => {
-    return openinghours.find();
+    return Openinghours.find();
 };
 
 const getopeninghoursById = async (openinghoursId) => {
-    return openinghours.findById(openinghoursId);
+    return Openinghours.findById(openinghoursId);
 };
 
 const updateRecode = async (openinghoursId, updateBody) => {
-    return openinghours.findByIdAndUpdate(openinghoursId, { $set: updateBody });
+    return Openinghours.findByIdAndUpdate(openinghoursId, { $set: updateBody });
 };
 
 const deleteRecode = async (openinghoursId) => {
-    return openinghours.findByIdAndDelete(openinghoursId);
+    return Openinghours.findByIdAndDelete(openinghoursId);
 };
 
 module.exports = {

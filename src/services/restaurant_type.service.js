@@ -1,4 +1,4 @@
-const { restauranttype } = require("../model");
+const { Restauranttype } = require("../model");
 
 /**
  * Create restaurant type
@@ -7,23 +7,23 @@ const { restauranttype } = require("../model");
  */
 
 const createRestauranttype = async (reqBody) => {
-    return restauranttype.create(reqBody);
+    return Restauranttype.create(reqBody);
 };
 
 const restauranttypeList = async (req, res) => {
-    return restauranttype.find();
+    return Restauranttype.find();
 };
 
 const deleteRecode = async (restauranttypeId) => {
-    return restauranttype.findByIdAndDelete(restauranttypeId);
+    return Restauranttype.findByIdAndDelete(restauranttypeId);
 };
 
 const updateRecode = async (restauranttypeId, updateBody) => {
-    return restauranttype.findByIdAndUpdate(restauranttypeId, { $set: updateBody });
+    return Restauranttype.findByIdAndUpdate(restauranttypeId, { $set: updateBody });
 };
 
 const getrestauranttypeById = async (restauranttypeId) => {
-    return restauranttype.findById(restauranttypeId);
+    return Restauranttype.findById(restauranttypeId);
 };
 
 module.exports = {

@@ -13,5 +13,5 @@ const stateSchema = new mongoose.Schema(
     }
 );
 
-const state = mongoose.model("state", stateSchema);
-module.exports = state;
+const State = mongoose.model("State", stateSchema);
+module.exports = State;

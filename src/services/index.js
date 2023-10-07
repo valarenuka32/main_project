@@ -9,3 +9,4 @@ module.exports.openinghoursService = require("./opening_hours.service");
 module.exports.countryService = require("./country.service");
 module.exports.cityService = require("./city.service");
 module.exports.adminService = require("./admin.service");
+module.exports.itemService = require("./item.service");

@@ -1,28 +1,28 @@
-const { payment } = require("../model");
+const { Payment } = require("../model");
 
 /**
  * Create payment
  * @param {object} reqBody
- * @returns {Promise<payment>}
+ * @returns {Promise<User>}
  */
 
 const createPayment = async (reqBody) => {
-    return payment.create(reqBody)
+    return Payment.create(reqBody)
 };
 const paymentList = async (req, res) => {
-    return payment.find()
+    return Payment.find()
 };
 
 const getpaymentById = async (paymentId) => {
-    return payment.findById(paymentId)
+    return Payment.findById(paymentId)
 };
 
 const updateRecode = async (paymentId, updateBody) => {
-    return payment.findByIdAndUpdate(paymentId, { $set: updateBody });
+    return Payment.findByIdAndUpdate(paymentId, { $set: updateBody });
 };
 
 const deleteRecode = async (paymentId) => {
-    return payment.findByIdAndDelete(paymentId);
+    return Payment.findByIdAndDelete(paymentId);
 };
 
 module.exports = {

@@ -1,4 +1,4 @@
-const { state } = require("../model");
+const { State } = require("../model");
 
 /**
  * Create user
@@ -7,23 +7,23 @@ const { state } = require("../model");
  */
 
 const createState = async (reqbody) => {
-    return state.crate(reqbody);
+    return State.crate(reqbody);
 };
 
 const stateList = (req, res) => {
-    return state.find();
+    return State.find();
 };
 
 const deleteRecode = async (stateId) => {
-    return state.findByIdAndDelete(stateId);
+    return State.findByIdAndDelete(stateId);
 };
 
 const updateRecode = async (stateId, updateBody) => {
-    return state.findByIdAndUpdate(stateId, { $set: updateBody });
+    return State.findByIdAndUpdate(stateId, { $set: updateBody });
 };
 
 const getStateById = async (stateId) => {
-    return state.findById(stateId);
+    return State.findById(stateId);
 };
 module.exports = {
     createState,

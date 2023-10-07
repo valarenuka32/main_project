@@ -12,5 +12,5 @@ const restaurantimgSchema = new mongoose.Schema(
         versionKey: false,
     }
 );
-const restaurantimage = mongoose.model("restaurantimage", restaurantimgSchema);
-module.exports = restaurantimage;
+const Restaurantimage = mongoose.model("Restaurantimage", restaurantimgSchema);
+module.exports = Restaurantimage;
