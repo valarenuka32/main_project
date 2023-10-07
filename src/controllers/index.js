@@ -9,3 +9,5 @@ module.exports.openinghoursController=require("./opening_hours.controller");
 module.exports.countryController=require("./country.controller");
 module.exports.cityController=require("./city.controller");
 module.exports.adminController=require("./admin.controller");
+module.exports.itemController=require("./item.controller");
+module.exports.menuitemController=require("./menuitem.controller");

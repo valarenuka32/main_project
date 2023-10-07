@@ -9,3 +9,5 @@ module.exports.openinghoursValidation= require("./opening_hours.validation");
 module.exports.countryValidation= require("./country.validation");
 module.exports.cityValidation= require("./city.validation");
 module.exports.adminValidation= require("./admin.validation");
+module.exports.itemValidation= require("./item.validation");
+module.exports.menuitemValidation= require("./menuitem.validation");

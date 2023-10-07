@@ -3,7 +3,7 @@ const { Admin } = require("../model");
 /**
  * Create Admin
  * @param {object} reqBody
- * @returns {Promise<Admin>}
+ * @returns {Promise<User>}
  */
 
 const createAdmin = async (reqBody) => {
