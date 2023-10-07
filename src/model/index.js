@@ -14,3 +14,7 @@ module.exports.offeritem = require("./offer_item.model");
 module.exports.item = require("./item.model");
 module.exports.menuitem = require("./menu_item.model");
 module.exports.review = require("./review.model");
+module.exports.comment = require("./comment.model");
+module.exports.DeliveryAddresses = require("./delivery_addresses.model");
+module.exports.Deliverydrivers = require("./delivery_drivers.model");
+module.exports.Deliveries = require("./deliveries.model");
