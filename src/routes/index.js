@@ -16,25 +16,31 @@ const orderitemRouter = require("./order_item.route");
 const cartRouter = require("./cart.route");
 const offerRouter = require("./offer.route");
 const offeritemRouter = require("./offer_item.route");
+const deliveryaddressesRouter = require("./delivery_addresses.route");
+const deliverydriversRouter = require("./delivery_drivers.route");
+const deliveriesRouter = require("./deliveries.route");
 
 const router = express.Router();
 
 router.use("/user", userRouter);
 router.use("/restaurant", restaurantRouter);
-router.use("/restauranttype", restauranttypeRouter);
+router.use("/restaurant_type", restauranttypeRouter);
 router.use("/state", stateRouter);
 router.use("/payment", paymentRouter);
-router.use("/restaurantimg", restaurantimgRouter);
+router.use("/restaurant_img", restaurantimgRouter);
 router.use("/order", orderRouter);
-router.use("/openinghours", openinghoursRouter);
+router.use("/opening_hours", openinghoursRouter);
 router.use("/country", countryRouter);
 router.use("/city", cityRouter);
 router.use("/admin", adminRouter);
 router.use("/item", itemRouter);
-router.use("/menuitem", menuitemRouter);
-router.use("/orderitem", orderitemRouter);
+router.use("/menu_item", menuitemRouter);
+router.use("/order_item", orderitemRouter);
 router.use("/cart", cartRouter);
 router.use("/offer", offerRouter);
-router.use("/offeritem", offeritemRouter);
+router.use("/offer_item", offeritemRouter);
+router.use("/delivery_addresses", deliveryaddressesRouter);
+router.use("/delivery_drivers", deliverydriversRouter);
+router.use("/deliveries", deliveriesRouter);
 
 module.exports = router;

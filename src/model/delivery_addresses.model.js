@@ -6,17 +6,17 @@ const deliveryAddressesSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        user: {
+        User: {
             type: mongoose.Types.ObjectId,
-            ref: "user"
+            ref: "User"
         },
-        city: {
+        City: {
             type: mongoose.Types.ObjectId,
-            ref: "city"
+            ref: "City"
         },
-        state: {
+        State: {
             type: mongoose.Types.ObjectId,
-            ref: "state"
+            ref: "State"
         },
         is_active: {
             type: Boolean,

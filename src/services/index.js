@@ -15,3 +15,6 @@ module.exports.orderitemService = require("./order_item.service");
 module.exports.cartService = require("./cart.service");
 module.exports.offerService = require("./offer.service");
 module.exports.offeritemService = require("./offer_item.service");
+module.exports.deliveryaddressesService = require("./delivery_addresses.service");
+module.exports.deliverydriversService = require("./delivery_drivers.service");
+module.exports.deliveriesService = require("./deliveries.service");

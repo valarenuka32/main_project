@@ -10,9 +10,9 @@ const deliveriesSchema = new mongoose.Schema(
             type: Date,
             default: Date.now(),
         },
-        order: {
+        Order: {
             type: mongoose.Types.ObjectId,
-            ref: "order"
+            ref: "Order"
         },
         Deliverydrivers: {
             type: mongoose.Types.ObjectId,

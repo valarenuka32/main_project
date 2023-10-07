@@ -15,3 +15,6 @@ module.exports.orderitemValidation= require("./order_item.validation");
 module.exports.cartValidation= require("./cart.validation");
 module.exports.offerValidation= require("./offer.validation");
 module.exports.offeritemValidation= require("./offer_item.validation");
+module.exports.deliveryaddressesValidation= require("./delivery_addresses.validation");
+module.exports.deliverydriversValidation= require("./delivery_drivers.validation");
+module.exports.deliveriesValidation= require("./deliveries.validation");
