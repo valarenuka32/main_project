@@ -1,6 +1,6 @@
 const { openinghoursService } = require("../services");
 
-// create 
+// create
 const createOpeninghours = async (req, res) => {
     try {
         const reqBody = req.body;
