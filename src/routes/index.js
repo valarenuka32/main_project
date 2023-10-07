@@ -19,6 +19,8 @@ const offeritemRouter = require("./offer_item.route");
 const deliveryaddressesRouter = require("./delivery_addresses.route");
 const deliverydriversRouter = require("./delivery_drivers.route");
 const deliveriesRouter = require("./deliveries.route");
+const commentRouter = require("./comment.route");
+const reviewRouter = require("./review.route");
 
 const router = express.Router();
 
@@ -42,5 +44,7 @@ router.use("/offer_item", offeritemRouter);
 router.use("/delivery_addresses", deliveryaddressesRouter);
 router.use("/delivery_drivers", deliverydriversRouter);
 router.use("/deliveries", deliveriesRouter);
+router.use("/comment", commentRouter);
+router.use("/review", reviewRouter);
 
 module.exports = router;

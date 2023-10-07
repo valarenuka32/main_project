@@ -18,6 +18,6 @@ module.exports.Payment = require("./payment.model"); 6
 module.exports.DeliveryAddresses = require("./delivery_addresses.model"); 18
 module.exports.Deliverydrivers = require("./delivery_drivers.model"); 19
 module.exports.Deliveries = require("./deliveries.model");20
-module.exports.comment = require("./comment.model");
+module.exports.Comment = require("./comment.model");21
 module.exports.Review = require("./review.model");
 module.exports.Notification = require("./notification.model");

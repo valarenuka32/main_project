@@ -18,3 +18,4 @@ module.exports.offeritemValidation= require("./offer_item.validation");
 module.exports.deliveryaddressesValidation= require("./delivery_addresses.validation");
 module.exports.deliverydriversValidation= require("./delivery_drivers.validation");
 module.exports.deliveriesValidation= require("./deliveries.validation");
+module.exports.commentValidation= require("./comment.validation");

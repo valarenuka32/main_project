@@ -1,18 +1,18 @@
 const mongoose = require("mongoose");
 
-const reviewSchema = new mongoose.Schema(
+const commentSchema = new mongoose.Schema(
     {
         content: {
             type: String,
             trim: true,
         },
-        restaurant:{
+        Restaurant:{
             type:mongoose.Types.ObjectId,
-            ref:"restaurant"
+            ref:"Restaurant"
         },
-        user:{
+        User:{
             type:mongoose.Types.ObjectId,
-            ref:"user"
+            ref:"User"
         },
         is_active: {
             type: Boolean,
@@ -25,5 +25,5 @@ const reviewSchema = new mongoose.Schema(
     }
 );
 
-const review = mongoose.model("review", reviewSchema);
-module.exports = review;
+const Comment = mongoose.model("Comment", commentSchema);
+module.exports = Comment;
