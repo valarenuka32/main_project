@@ -18,3 +18,4 @@ module.exports.comment = require("./comment.model");
 module.exports.DeliveryAddresses = require("./delivery_addresses.model");
 module.exports.Deliverydrivers = require("./delivery_drivers.model");
 module.exports.Deliveries = require("./deliveries.model");
+module.exports.Orderitem = require("./order_item.model");
