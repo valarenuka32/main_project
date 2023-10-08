@@ -7,7 +7,8 @@ const createAdmin = {
         last_name: Joi.string().trim().required(),
         email: Joi.string().trim().required(),
         phone_no: Joi.number().integer(),
-        email: Joi.string().trim().required(),
+        position: Joi.string().trim().required(),
+        User: Joi.string().required(),
     })
 };
 

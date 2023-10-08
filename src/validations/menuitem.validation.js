@@ -8,6 +8,7 @@ const createMenuitem = {
         price: Joi.number().integer(),
         category: Joi.string().trim().required(),
         availability: Joi.string().trim().required(),
+        Image: Joi.string().required(),
     })
 };
 
