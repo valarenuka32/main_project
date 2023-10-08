@@ -5,15 +5,15 @@ const { emailService, userService } = require("../services");
 const { User } = require("../model");
 
 // server runing on every 3 second
-new CronJob(
-    "*/3 * * * * *",
-    function () {
-        console.log("It's running on every 3 seconds.")
-    },
-    null,
-    false,
-    "Asia/Kolkata"
-).start();
+// new CronJob(
+//     "*/3 * * * * *",
+//     function () {
+//         console.log("It's running on every 3 seconds.")
+//     },
+//     null,
+//     false,
+//     "Asia/Kolkata"
+// ).start();
 
 // Send mail
 new CronJob(

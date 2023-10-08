@@ -1,8 +1,15 @@
 const moment = require("moment");
+const { User } = require("../model")
+const joi = require("joi");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const jwtSecrectKey = "cdccsvavsvfssbtybnjnu";
 const { userService, emailService } = require("../services");
+const { auth } = require("../middlewares/auth");
 
 // create
 const register = async (req, res) => {
+    // validation;
     const { email, password, role } = req.body;
 
     const hashPassword = await bcrypt.hash(password, 8);
@@ -10,10 +17,10 @@ const register = async (req, res) => {
     let option = {
         email,
         role,
-        exp: moment().add(1, "day").unix(),
+        exp: moment().add(1, "days").unix(),
     };
 
-    const token = await JsonWebTokenError.sign(option, jwtSecrectKey);
+    const token = await jwt.sign(option, jwtSecrectKey);
 
     const filter = {
         email,
@@ -21,6 +28,7 @@ const register = async (req, res) => {
         password: hashPassword,
         token,
     };
+
     const data = await userService.createUser(filter);
 
     res.status(200).json({ data });
@@ -96,4 +104,4 @@ module.exports = {
     login,
     getAllUser,
     sendMail
-}
+};

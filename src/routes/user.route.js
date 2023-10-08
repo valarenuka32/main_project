@@ -6,20 +6,20 @@ const { auth } = require("../middlewares/auth");
 
 const router = express.Router();
 
-create
+// create
 router.post(
-    "/create-user",
-    validate(userValidation.createUser),
+    "/register",
+    // validate(userValidation.createUser),
     userController.register
 );
 
 router.post(
-    "/create-user",
+    "/login",
     userController.login
 );
 // list
 router.get(
-    "/list",
+    "/alluserlist",
     userController.getAllUser
 );
 
