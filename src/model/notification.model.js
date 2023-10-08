@@ -10,9 +10,9 @@ const notificationSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        user: {
+        User: {
             type: mongoose.Types.ObjectId,
-            ref: "user",
+            ref: "User",
         },
     },
     {

@@ -19,3 +19,5 @@ module.exports.deliveryaddressesValidation= require("./delivery_addresses.valida
 module.exports.deliverydriversValidation= require("./delivery_drivers.validation");
 module.exports.deliveriesValidation= require("./deliveries.validation");
 module.exports.commentValidation= require("./comment.validation");
+module.exports.reviewValidation= require("./review.validation");
+module.exports.notificationValidation= require("./notification.validation");

@@ -21,6 +21,7 @@ const deliverydriversRouter = require("./delivery_drivers.route");
 const deliveriesRouter = require("./deliveries.route");
 const commentRouter = require("./comment.route");
 const reviewRouter = require("./review.route");
+const notificationRouter = require("./notification.route");
 
 const router = express.Router();
 
@@ -46,5 +47,6 @@ router.use("/delivery_drivers", deliverydriversRouter);
 router.use("/deliveries", deliveriesRouter);
 router.use("/comment", commentRouter);
 router.use("/review", reviewRouter);
+router.use("/notification", notificationRouter);
 
 module.exports = router;

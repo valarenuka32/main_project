@@ -20,4 +20,4 @@ module.exports.Deliverydrivers = require("./delivery_drivers.model"); 19
 module.exports.Deliveries = require("./deliveries.model");20
 module.exports.Comment = require("./comment.model");21
 module.exports.Review = require("./review.model");22
-module.exports.Notification = require("./notification.model");
+module.exports.Notification = require("./notification.model");23

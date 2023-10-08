@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const reviewSchema = new mongoose.Schema(
     {
         rating: {
-            type: String,
-            trim: true,
+            type: Number,
+            default: 2,
         },
         review: {
             type: String,
@@ -14,13 +14,13 @@ const reviewSchema = new mongoose.Schema(
             type: Date,
             default: Date.now(),
         },
-        Restaurant:{
-            type:mongoose.Types.ObjectId,
-            ref:"Restaurant"
+        Restaurant: {
+            type: mongoose.Types.ObjectId,
+            ref: "Restaurant"
         },
-        User:{
-            type:mongoose.Types.ObjectId,
-            ref:"User"
+        User: {
+            type: mongoose.Types.ObjectId,
+            ref: "User"
         },
         is_active: {
             type: Boolean,

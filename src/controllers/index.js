@@ -18,3 +18,4 @@ module.exports.offeritemController = require("./offer_item.controller");
 module.exports.deliveryaddressesController = require("./delivery_addresses.controller");
 module.exports.deliveriesController = require("./deliveries.controller");
 module.exports.commentController = require("./comment.controller");
+module.exports.reviewController = require("./review.controller");
