@@ -18,6 +18,10 @@ const orderitemSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "Item",
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
     },
     {
         timestamps: true,

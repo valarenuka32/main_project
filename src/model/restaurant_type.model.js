@@ -6,10 +6,14 @@ const restauranttypeSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
-        Restaurant:{
-            type:mongoose.Types.ObjectId,
-            ref:"Restaurant",
+        description: {
+            type: String,
+            trim: true,
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
     },
     {
         timestamps: true,

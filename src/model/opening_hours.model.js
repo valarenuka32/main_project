@@ -18,6 +18,10 @@ const openinghoursSchema = new mongoose.Schema(
             type:mongoose.Types.ObjectId,
             ref:"Restaurant",
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
     },
     {
         timestamps: true,

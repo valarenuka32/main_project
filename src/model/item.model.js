@@ -14,6 +14,10 @@ const itemSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "Menuitem",
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
     },
     {
         timestamps: true,

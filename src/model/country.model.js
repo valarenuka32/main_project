@@ -6,6 +6,10 @@ const countrySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
     },
     {
         timestamps: true,

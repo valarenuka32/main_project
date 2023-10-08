@@ -26,6 +26,10 @@ const paymentSchema = new mongoose.Schema(
             type:mongoose.Types.ObjectId,
             ref:"Order",
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
     },
     {
         timestamps: true,

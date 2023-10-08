@@ -21,10 +21,19 @@ const restaurantSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "Owner",
         },
-        Owner: {
+        Restauranttype: {
             type: mongoose.Types.ObjectId,
-            ref: "Owner",
+            ref: "Restauranttype",
         },
+        Image: {
+            type: mongoose.Types.ObjectId,
+            ref: "Image",
+        },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
+
     },
     {
         timestamps: true,

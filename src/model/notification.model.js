@@ -14,6 +14,10 @@ const notificationSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "User",
         },
+        is_active: {
+            type: Boolean,
+            default: true,
+        }
     },
     {
         timestamps: true,
