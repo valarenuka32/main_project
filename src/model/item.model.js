@@ -10,9 +10,9 @@ const itemSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        menuitem: {
+        Menuitem: {
             type: mongoose.Types.ObjectId,
-            ref: "menuitem",
+            ref: "Menuitem",
         },
     },
     {
