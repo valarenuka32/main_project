@@ -83,10 +83,20 @@ const deleteRecode = async (req, res) => {
         if (!imageEx) {
             throw new Error("Image is not found")
         }
-        await imageService.deleteRecode(imageId);
+
+        const deleteimage = await imageService.deleteRecode(imageId);
+        if (deleteimage) {
+            const filePath = `./public/image/${imageEx.image}`;
+            if (fs.existsSync(filePath)) {
+                fs.unlinkSync(filePath);
+            }
+        } else {
+            throw new Error("Somthing want wrong.please try agian or later!")
+        }
         res.status(200).json({
             success: false,
-            message: "Image delete successfully"
+            message: "Image delete successfully",
+            data: deleteimage
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message })
