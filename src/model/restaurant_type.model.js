@@ -5,7 +5,11 @@ const restauranttypeSchema = new mongoose.Schema(
         restaurant_type: {
             type: String,
             trim: true
-        }
+        },
+        Restaurant:{
+            type:mongoose.Types.ObjectId,
+            ref:"Restaurant",
+        },
     },
     {
         timestamps: true,

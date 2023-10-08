@@ -6,6 +6,10 @@ const stateSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        Country: {
+            type: mongoose.Types.ObjectId,
+            ref: "Country",
+        },
     },
     {
         timestamps: true,

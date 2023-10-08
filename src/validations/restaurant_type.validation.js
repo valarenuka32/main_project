@@ -1,12 +1,13 @@
-const Joi=require(joi);
+const Joi = require(joi);
 
-// restauranttype create
-const createRestauranttype={
-    body:Joi.onject().keys({
-        restaurant_type:Joi.string().trim().required(),
+// restaurant type create
+const createRestauranttype = {
+    body: Joi.onject().keys({
+        restaurant_type: Joi.string().trim().required(),
+        Restaurant: Joi.string(),
     })
 };
 
-module.exports={
+module.exports = {
     createRestauranttype
 };

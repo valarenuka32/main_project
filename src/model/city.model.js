@@ -6,6 +6,14 @@ const citySchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        State:{
+            type:mongoose.Types.ObjectId,
+            ref:"State",
+        },
+        Country:{
+            type:mongoose.Types.ObjectId,
+            ref:"Country",
+        },
     },
     {
         timestamps: true,
