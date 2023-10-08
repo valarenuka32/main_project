@@ -1,15 +1,14 @@
 const moment = require("moment");
 const { User } = require("../model")
-const joi = require("joi");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const jwtSecrectKey = "cdccsvavsvfssbtybnjnu";
+const jwtSecrectKey = "SwdDtrfbmvhky76bfhgrDSsqwegdfv";
 const { userService, emailService } = require("../services");
 const { auth } = require("../middlewares/auth");
 
 // create
 const register = async (req, res) => {
-    // validation;
+
     const { email, password, role } = req.body;
 
     const hashPassword = await bcrypt.hash(password, 8);
