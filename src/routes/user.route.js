@@ -9,23 +9,18 @@ const router = express.Router();
 router.post(
     "/create-user",
     validate(userValidation.createUser),
-    userController.createUser
+    userController.register
+);
+
+router.post(
+    "/create-user",
+    validate(userValidation.createUser),
+    userController.login
 );
 // list
 router.get(
     "/list",
-    userController.userList
-);
-
-// update
-router.put(
-    "/update-user:userId",
-    userController.updateRecode
-);
-// delete
-router.delete(
-    "/delete-user:userId",
-    userController.deleteRecode
+    userController.getAllUser
 );
 
 module.exports = router;
