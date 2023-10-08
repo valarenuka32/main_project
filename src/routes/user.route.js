@@ -5,23 +5,22 @@ const validate = require("../middlewares/validate");
 
 const router = express.Router();
 
-// create
-// router.post(
-//     "/create-user",
-//     validate(userValidation.createUser),
-//     userController.register
-// );
+create
+router.post(
+    "/create-user",
+    validate(userValidation.createUser),
+    userController.register
+);
 
-// router.post(
-//     "/create-user",
-//     validate(userValidation.createUser),
-//     userController.login
-// );
-// // list
-// router.get(
-//     "/list",
-//     userController.getAllUser
-// );
+router.post(
+    "/create-user",
+    userController.login
+);
+// list
+router.get(
+    "/list",
+    userController.getAllUser
+);
 
 router.post(
     "/send-mail",

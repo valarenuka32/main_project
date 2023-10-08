@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema(
     {
@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        role: {
+            type: String,
+            enum: ["admin", "user", "subadmin"],
+          },
         is_active: {
             type: Boolean,
             default: false,
@@ -32,14 +36,14 @@ const userSchema = new mongoose.Schema(
     }
 );
 
-userSchema.pre("save", async function (next) {
-    const user = this;
+// userSchema.pre("save", async function (next) {
+//     const user = this;
 
-    if (user.isModified("password")) {
-        user.password = bcrypt.hash(user.password, 8)
-    }
-    next();
-});
+//     if (user.isModified("password")) {
+//         user.password = bcrypt.hash(user.password, 8)
+//     }
+//     next();
+// });
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;

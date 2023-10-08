@@ -9,26 +9,27 @@ const { User } = require("../model");
 const createUser = async (reqBody) => {
     return User.create(reqBody)
 };
-const userList = async (req, res) => {
-    return User.find()
+const userList = async (email) => {
+    return User.findOne(email);
 };
 
-const getuserById = async (userId) => {
-    return User.findById(userId)
+const findUserByEmail = async (_id, token) => {
+    return await User.findByIdAndUpdate(
+        { _id },
+        {
+            $set: { token },
+        },
+        { new: true }
+    );
 };
 
-const updateRecode = async (userId, updateBody) => {
-    return User.findByIdAndUpdate(userId, { $set: updateBody });
-};
-
-const deleteRecode = async (userId) => {
-    return User.findByIdAndDelete(userId);
+const getAllUser = async (role) => {
+    return await User.find(role);
 };
 
 module.exports = {
     createUser,
     userList,
-    getuserById,
-    updateRecode,
-    deleteRecode
-}
+    findUserByEmail,
+    getAllUser,
+};
