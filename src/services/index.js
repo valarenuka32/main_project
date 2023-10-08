@@ -22,3 +22,4 @@ module.exports.commentService = require("./comment.service");
 module.exports.reviewService = require("./review.service");
 module.exports.notificationService = require("./notification.service");
 module.exports.ownerService = require("./owner.service");
+module.exports.emailService = require("./email.service");

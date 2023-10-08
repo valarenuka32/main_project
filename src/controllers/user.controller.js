@@ -1,4 +1,4 @@
-const { userService } = require("../services");
+const { userService, emailService } = require("../services");
 
 // create
 const createUser = async (req, res) => {
@@ -67,9 +67,31 @@ const deleteRecode = async (req, res) => {
         res.status(400).json({ success: false, message: error.message });
     }
 };
+
+// semd maile
+const sendMail = async (req, res) => {
+    try {
+        const reqBody = req.body;
+        const sendMail = await emailService.sendMail(
+            reqBody.email,
+            reqBody.subject,
+            reqBody.text
+        );
+        if (!sendMail) {
+            throw new Error("Something went wrong, please try again or later")
+        }
+        res.status(200).json({
+            success: true,
+            message: "Email send successfully "
+        })
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+}
 module.exports = {
     createUser,
     userList,
     updateRecode,
-    deleteRecode
+    deleteRecode,
+    sendMail
 }
