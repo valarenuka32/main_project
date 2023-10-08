@@ -21,6 +21,10 @@ const adminSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        User: {
+            type: mongoose.Types.ObjectId,
+            ref: "User",
+        },
         is_active: {
             type: Boolean,
             default: true,

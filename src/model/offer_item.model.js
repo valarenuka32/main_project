@@ -2,14 +2,6 @@ const mongoose = require("mongoose");
 
 const offeritemSchema = new mongoose.Schema(
     {
-        Offer: {
-            type: mongoose.Types.ObjectId,
-            ref: "Offer",
-        },
-        Item: {
-            type: mongoose.Types.ObjectId,
-            ref: "Item",
-        },
         discounted_price: {
             type: Number,
             default: 0,
@@ -17,6 +9,14 @@ const offeritemSchema = new mongoose.Schema(
         free_item_quantity: {
             type: Number,
             default: 0,
+        },
+        Offer: {
+            type: mongoose.Types.ObjectId,
+            ref: "Offer",
+        },
+        Item: {
+            type: mongoose.Types.ObjectId,
+            ref: "Item",
         },
         is_active: {
             type: Boolean,
