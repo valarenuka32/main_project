@@ -4,7 +4,7 @@ const Joi = require("joi");
 const createPayment = {
     body: Joi.object().keys({
         payment_method: Joi.string().trim().required(),
-        amount: Joi.string().number().integer().required(),
+        amount: Joi.number().integer().required(),
         payment_date: Joi.date().required(),
         payment_status: Joi.date().required(),
         User: Joi.string().required(),

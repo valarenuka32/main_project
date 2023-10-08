@@ -1,8 +1,8 @@
-const Joi = require(joi);
+const Joi = require("joi");
 
 // restaurant type create
 const createRestauranttype = {
-    body: Joi.onject().keys({
+    body: Joi.object().keys({
         restaurant_type: Joi.string().trim().required(),
         description: Joi.string().trim().required(),
     })

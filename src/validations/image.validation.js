@@ -1,8 +1,8 @@
-const Joi = require(joi);
+const Joi = require("joi");
 
 //Restaurant img validation
 const createImage = {
-    body: Joi.onject().keys({
+    body: Joi.object().keys({
         image: Joi.string().trim().required(),
     })
 };

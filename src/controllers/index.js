@@ -1,5 +1,6 @@
 module.exports.userController = require("./user.controller");
 module.exports.restaurantController = require("./restaurant.controllers");
+module.exports.ownerController = require("./owner.controller");
 module.exports.restauranttypeController = require("./restaurant_type.controller");
 module.exports.stateController = require("./state.controller");
 module.exports.paymentController = require("./payment.controller");
@@ -16,6 +17,8 @@ module.exports.cartController = require("./cart.controller");
 module.exports.offerController = require("./offer.controller");
 module.exports.offeritemController = require("./offer_item.controller");
 module.exports.deliveryaddressesController = require("./delivery_addresses.controller");
+module.exports.deliverydriversController = require("./delivery_drivers.controller");
 module.exports.deliveriesController = require("./deliveries.controller");
 module.exports.commentController = require("./comment.controller");
 module.exports.reviewController = require("./review.controller");
+module.exports.notificationController = require("./notification.controller");

@@ -5,7 +5,7 @@ const createReview = {
     body: Joi.object().keys({
         rating: Joi.number().integer(),
         review: Joi.string().trim().required(),
-        review_date: Joi.date().integer().required(),
+        review_date: Joi.date().required(),
         Restaurant: Joi.string(),
         User: Joi.string(),
     })
