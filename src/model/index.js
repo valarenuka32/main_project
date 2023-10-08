@@ -1,5 +1,6 @@
 module.exports.User = require("./user.model");
 module.exports.Admin = require("./admin.model");
+module.exports.Owner = require("./owner.model");
 module.exports.Restaurant = require("./restaurant.model");
 module.exports.Restauranttype = require("./restaurant_type.model");
 module.exports.Restaurantimage = require("./restaurant_image.route");

@@ -21,3 +21,4 @@ module.exports.deliveriesService = require("./deliveries.service");
 module.exports.commentService = require("./comment.service");
 module.exports.reviewService = require("./review.service");
 module.exports.notificationService = require("./notification.service");
+module.exports.ownerService = require("./owner.service");

@@ -17,6 +17,10 @@ const restaurantSchema = new mongoose.Schema(
             type: Boolean,
             default: false,
         },
+        Owner: {
+            type: mongoose.Types.ObjectId,
+            ref: "Owner",
+        },
     },
     {
         timestamps: true,

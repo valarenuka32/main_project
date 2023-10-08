@@ -21,3 +21,4 @@ module.exports.deliveriesValidation= require("./deliveries.validation");
 module.exports.commentValidation= require("./comment.validation");
 module.exports.reviewValidation= require("./review.validation");
 module.exports.notificationValidation= require("./notification.validation");
+module.exports.ownerValidation= require("./owner.validation");

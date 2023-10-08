@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema(
+const ownerSchema = new mongoose.Schema(
     {
         first_name: {
             type: String,
@@ -10,19 +10,16 @@ const userSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
-        password: {
-            type: Number
-        },
-        phone_no: {
-            type: Number
-        },
         email: {
             type: String,
             trim: true,
         },
-        is_active: {
-            type: Boolean,
-            default: false,
+        phone_no: {
+            type: Number
+        },
+        address: {
+            type: String,
+            trim: true,
         },
     },
     {
@@ -31,5 +28,5 @@ const userSchema = new mongoose.Schema(
     }
 );
 
-const User = mongoose.model("User", userSchema);
-module.exports = User;
+const Owner = mongoose.model("Owner", ownerSchema);
+module.exports = Owner;
