@@ -1,4 +1,4 @@
-const moment = require("moment/moment");
+const moment = require("moment");
 const { userService, emailService } = require("../services");
 
 // create
@@ -28,28 +28,47 @@ const register = async (req, res) => {
 
 // login
 const login = async (req, res) => {
-    const { email, password } = req.body;
 
-    const findUser = await userService.findUserByEmail({ email });
+    try {
+        const { email, password } = req.body;
 
-    if (!findUser) throw Error("User not found");
+        const findUser = await userService.findUserByEmail({ email });
 
-    const successPassword = await bcrypt.compare(password, findUser.password);
-    if (!successPassword) throw Error("Incorrect password");
-    let option = {
-        email,
-        role: findUser.role,
-        exp: moment().add(1, "days").unix(),
-    };
+        if (!findUser) throw Error("User not found");
 
-    let token;
-    if (findUser && successPassword) {
-        token = await jwt.sign(option, jwtSecrectKey)
+        const successPassword = await bcrypt.compare(password, findUser.password);
+        if (!successPassword) throw Error("Incorrect password");
+        let option = {
+            email,
+            role: findUser.role,
+            exp: moment().add(1, "days").unix(),
+        };
+
+        let token;
+        if (findUser && successPassword) {
+            token = await jwt.sign(option, jwtSecrectKey)
+        }
+
+        let data;
+        if (token) {
+            data = await userService.findUserAndUpdate(findUser._id, token);
+        }
+        res.status(200).json({ data });
+    } catch (error) {
+        res.status(404).json({ error: error.message });
     }
+};
 
-    let data;
-    if(token){
-        data=await userService.findUserAndUpdate(findUser._id,token);
+// Get alluser
+const getAllUser = async (req, res) => {
+    try {
+        console.log(req, headers.token, '');
+        await auth(req, headers.token, ['token']);
+
+        const data = await userService.getAllUser({ role: "admin" });
+        res.status(200).json({ data });
+    } catch (error) {
+        res.status(404).json({ error: error.message });
     }
 };
 // semd maile
@@ -75,5 +94,6 @@ const sendMail = async (req, res) => {
 module.exports = {
     register,
     login,
+    getAllUser,
     sendMail
 }
