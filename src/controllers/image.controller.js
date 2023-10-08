@@ -1,9 +1,16 @@
+const fs = require("fs");
 const { imageService } = require("../services");
 
 // create
 const createImage = async (req, res) => {
     try {
         const reqBody = req.body;
+
+        if (req.file) {
+            reqBody.image = req.file.filename;
+        } else {
+            throw new Error("image is required!");
+        }
         const image = await imageService.createImage(reqBody);
         res.status(200).json({
             success: true,
@@ -32,15 +39,35 @@ const imageList = async (req, res) => {
 // update
 const updateRecode = async (req, res) => {
     try {
+        const reqBody = req.Body;
         const imageId = req.params.imageId;
         const imageEx = await imageService.getimageById(imageId);
         if (!imageEx) {
             throw new Error("Image is not Found");
         };
-        await imageService.updateRecode(imageId, req.Body);
+
+        if (req.file) {
+            reqBody.image = req.file.filename;
+        }
+        const updateimage = await imageService.updateRecode(
+            imageId,
+            reqBody
+        );
+        if (updateimage) {
+            if (req.file) {
+                const filePath = `./public/image/${imageEx.image}`
+                if (fs.existsSync(filePath)) {
+                    fs.unlinkSync(filePath);
+                }
+            }
+        } else {
+            throw new Error("Something went wrong, please try again or later!")
+        }
+
         res.status(200).json({
             success: true,
             message: "Image update successfully!",
+            data: updateimage
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
