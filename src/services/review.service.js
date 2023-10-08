@@ -10,7 +10,9 @@ const createReview = async (reqBody) => {
     return Review.create(reqBody);
 };
 const reviewList = async (req, res) => {
-    return Review.find();
+    return Review.find()
+    .populate("Restaurant")
+    .populate("User");
 };
 
 const getreviewById = async (reviewId) => {

@@ -10,7 +10,8 @@ const createMenuitem = async (reqBody) => {
     return Menuitem.create(reqBody);
 };
 const menuitemList = async (req, res) => {
-    return Menuitem.find();
+    return Menuitem.find()
+    .populate("Image");
 };
 
 const getmenuitemById = async (menuitemId) => {

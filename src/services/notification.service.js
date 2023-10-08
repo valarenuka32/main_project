@@ -10,7 +10,8 @@ const createNotification = async (reqBody) => {
     return Notification.create(reqBody);
 };
 const notificationList = async (req, res) => {
-    return Notification.find();
+    return Notification.find()
+    .populate("User");
 };
 
 const getnotificationById = async (notificationId) => {

@@ -10,7 +10,9 @@ const createComment = async (reqBody) => {
     return Comment.create(reqBody);
 };
 const commentList = async (req, res) => {
-    return Comment.find();
+    return Comment.find()
+    .populate("Restaurant")
+    .populate("User");
 };
 
 const getcommentById = async (commentId) => {

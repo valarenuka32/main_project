@@ -11,6 +11,8 @@ const createPayment = async (reqBody) => {
 };
 const paymentList = async (req, res) => {
     return Payment.find()
+    .populate("User")
+    .populate("Order");
 };
 
 const getpaymentById = async (paymentId) => {

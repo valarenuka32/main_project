@@ -13,10 +13,6 @@ const restaurantSchema = new mongoose.Schema(
         restaurant_contect_no: {
             type: Number,
         },
-        is_active: {
-            type: Boolean,
-            default: false,
-        },
         Owner: {
             type: mongoose.Types.ObjectId,
             ref: "Owner",

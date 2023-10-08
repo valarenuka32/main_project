@@ -11,7 +11,10 @@ const createRestaurant = async (reqbody) => {
 };
 
 const restaurantList = async (req, res) => {
-    return Restaurant.find();
+    return Restaurant.find()
+    .populate("Owner")
+    .populate("Restauranttype")
+    .populate("Image");
 };
 
 const deleteRecode = async (restaurantId) => {

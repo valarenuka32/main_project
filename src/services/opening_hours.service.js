@@ -10,7 +10,8 @@ const createOpeninghours = async (reqBody) => {
     return Openinghours.create(reqBody);
 };
 const openinghoursList = async (req, res) => {
-    return Openinghours.find();
+    return Openinghours.find()
+    .populate("Restaurant");
 };
 
 const getopeninghoursById = async (openinghoursId) => {

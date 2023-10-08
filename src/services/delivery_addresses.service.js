@@ -10,7 +10,10 @@ const createDeliveryAddresses = async (reqBody) => {
     return DeliveryAddresses.create(reqBody);
 };
 const deliveryAddressesList = async (req, res) => {
-    return DeliveryAddresses.find();
+    return DeliveryAddresses.find()
+    .populate("User")
+    .populate("City")
+    .populate("State");
 };
 
 const getdeliveryaddressesById = async (deliveryaddressesId) => {

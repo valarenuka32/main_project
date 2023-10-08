@@ -10,7 +10,9 @@ const createOfferitem = async (reqBody) => {
     return Offeritem.create(reqBody);
 };
 const offeritemList = async (req, res) => {
-    return Offeritem.find();
+    return Offeritem.find()
+    .populate("Offer")
+    .populate("Item");
 };
 
 const getofferitemById = async (offeritemId) => {

@@ -10,7 +10,9 @@ const createDeliveries = async (reqBody) => {
     return Deliveries.create(reqBody);
 };
 const deliveriesList = async (req, res) => {
-    return Deliveries.find();
+    return Deliveries.find()
+    .populate("Order")
+    .populate("Deliverydrivers");
 };
 
 const getdeliveriesById = async (deliveriesId) => {

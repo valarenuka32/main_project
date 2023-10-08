@@ -10,7 +10,9 @@ const createOrderitem = async (reqBody) => {
     return Orderitem.create(reqBody);
 };
 const orderitemList = async (req, res) => {
-    return Orderitem.find();
+    return Orderitem.find()
+    .populate("Order")
+    .populate("Item");
 };
 
 const getorderitemById = async (orderitemId) => {

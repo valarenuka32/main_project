@@ -10,7 +10,8 @@ const createAdmin = async (reqBody) => {
     return Admin.create(reqBody);
 };
 const adminList = async (req, res) => {
-    return Admin.find();
+    return Admin.find()
+    .populate("User");
 };
 
 const getadminById = async (adminId) => {

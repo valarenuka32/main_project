@@ -11,7 +11,8 @@ const createState = async (reqbody) => {
 };
 
 const stateList = (req, res) => {
-    return State.find();
+    return State.find()
+    .populate("Country");
 };
 
 const deleteRecode = async (stateId) => {

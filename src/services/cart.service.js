@@ -10,7 +10,8 @@ const createCart = async (reqBody) => {
     return Cart.create(reqBody);
 };
 const cartList = async (req, res) => {
-    return Cart.find();
+    return Cart.find()
+    .populate("User");
 };
 
 const getcartById = async (cartId) => {

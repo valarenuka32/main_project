@@ -10,7 +10,8 @@ const createItem = async (reqBody) => {
     return Item.create(reqBody);
 };
 const itemList = async (req, res) => {
-    return Item.find();
+    return Item.find()
+    .populate("Menuitem");
 };
 
 const getitemById = async (itemId) => {
