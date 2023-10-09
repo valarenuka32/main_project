@@ -5,6 +5,7 @@ const countrySchema = new mongoose.Schema(
         country_name: {
             type: String,
             trim: true,
+            default:"india"
         },
         is_active: {
             type: Boolean,
