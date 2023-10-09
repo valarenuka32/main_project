@@ -4,7 +4,7 @@ const Joi = require("joi");
 const createDeliveryDrivers = {
     body: Joi.object().keys({
         name: Joi.string().trim().required(),
-        phone_number: Joi.number().integer(),
+        phone_number: Joi.number().integer().required(),
     })
 };
 
