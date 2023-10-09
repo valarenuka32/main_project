@@ -60,7 +60,7 @@ const deleteRecode = async (req, res) => {
         if (!stateEx) {
             throw new Error("State details not found")
         }
-        await stateService.deleteRecode(stateId)
+        await stateService.deleteRecode(stateId);
         res.status(200).json({
             success: true,
             message: "State details delete successfully!"
