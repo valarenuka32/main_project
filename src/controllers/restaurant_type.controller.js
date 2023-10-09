@@ -3,7 +3,7 @@ const { restauranttypeService } = require("../services");
 // create restauranttype
 const createRestauranttype = async (req, res) => {
     try {
-        const reqBody = req.Body;
+        const reqBody = req.body;
 
         const restauranttype = await restauranttypeService.createRestauranttype(reqBody);
         res.status(200).json({
@@ -57,7 +57,7 @@ const updateRecode = async (req, res) => {
 // delete
 const deleteRecode = async (req, res) => {
     try {
-        const restauranttypeId = req.params.restauranttypeId;
+        const restauranttypeId = res.params.restauranttypeId;
         const restaurantEx = await restauranttypeService.getrestauranttypeById(restauranttypeId);
         if (!restaurantEx) {
             throw new Error("Restaurant Type is not found");

@@ -12,7 +12,7 @@ const createCity = async (reqBody) => {
 const cityList = async (req, res) => {
     return City.find()
     .populate("State")
-    .populate("User");
+    .populate("Country");
 };
 
 const getcityById = async (cityId) => {
