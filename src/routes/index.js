@@ -31,7 +31,7 @@ router.use("/restaurant", restaurantRouter);
 router.use("/restaurant_type", restauranttypeRouter);
 router.use("/state", stateRouter);
 router.use("/payment", paymentRouter);
-router.use("/restaurant_img", restaurantimgRouter);
+router.use("/image", restaurantimgRouter);
 router.use("/order", orderRouter);
 router.use("/opening_hours", openinghoursRouter);
 router.use("/country", countryRouter);

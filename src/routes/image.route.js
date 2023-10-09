@@ -8,7 +8,7 @@ const router = express.Router();
 
 // create
 router.post(
-    "/create-restaurant_img",
+    "/create-img",
     upload.single("image"),
     validate(imageValidation.createImage),
     imageController.createImage
@@ -22,13 +22,13 @@ router.get(
 
 // update
 router.put(
-    "/update-restaurant_img/:imageId",
+    "/update-img/:imageId",
     imageController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-restaurant_img/:imageId",
+    "/delete-img/:imageId",
     imageController.deleteRecode
 );
 

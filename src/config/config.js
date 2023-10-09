@@ -30,8 +30,8 @@ module.exports = {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         },
-        base_url: envVars.BASE_URL,
     },
+    base_url: envVars.BASE_URL,
     email: {
         smtp: {
             host: envVars.SMTP_HOST,
