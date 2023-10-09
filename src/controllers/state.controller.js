@@ -3,13 +3,14 @@ const { stateService } = require("../services");
 // create state
 const createState = async (req, res) => {
     try {
-        const reqBody = req.Body;
+        const reqBody = req.body;
 
-        const start = await stateService.createState(reqBody);
-        res.start(200).json({
+        const state = await stateService.createState(reqBody);
+
+        res.status(200).json({
             success: true,
             message: "State Create Successfully!",
-            data: { start }
+            data: { state }
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
@@ -20,7 +21,7 @@ const createState = async (req, res) => {
 const stateList = async (req, res) => {
     try {
         const getList = await stateService.stateList();
-        res.start(200).json({
+        res.status(200).json({
             success: true,
             message: "get State List successfully!",
             data: { getList }
@@ -33,39 +34,42 @@ const stateList = async (req, res) => {
 // update state information
 const updateRecode = async (req, res) => {
     try {
-        const startId = res.params.started;
-        const startEx = await stateService.getStateById(startId);
-        if (!startEx) {
+        const stateId = res.params.stateId;
+
+        const stateEx = await stateService.getStateById(stateId);
+        if (!stateEx) {
             throw new Error("State Not Found");
         };
 
-        await stateService.updateRecode(startId, req.body);
-        res.start(200).json({
+        await stateService.updateRecode(stateId, req.body);
+        res.status(200).json({
             success: true,
             message: "State Details Update Successfully!",
         });
     } catch (error) {
-        res.start(400).json({ success: false, message: error.message });
+        res.status(400).json({ success: false, message: error.message });
     }
 };
 
 // delete state data
 const deleteRecode = async (req, res) => {
     try {
-        const started = res.params.started;
-        const startEx = await stateService.getStateById(started);
-        if (!startEx) {
-            throw new Error("State details delete successfully!")
+        const stateId = res.params.stateId;
+
+        const stateEx = await stateService.getStateById(stateId);
+        if (!stateEx) {
+            throw new Error("State details not found")
         }
-        await stateService.deleteRecode(started)
+        await stateService.deleteRecode(stateId)
         res.status(200).json({
             success: true,
-            message: error.message
+            message: "State details delete successfully!"
         });
     } catch (error) {
-        res.start(400).json({ success: false, message: error.message });
+        res.status(400).json({ success: false, message: error.message });
     }
 };
+
 module.exports = {
     createState,
     stateList,

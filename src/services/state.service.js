@@ -7,12 +7,12 @@ const { State } = require("../model");
  */
 
 const createState = async (reqbody) => {
-    return State.crate(reqbody);
+    return State.create(reqbody);
 };
 
 const stateList = (req, res) => {
     return State.find()
-    .populate("Country");
+        .populate("Country");
 };
 
 const deleteRecode = async (stateId) => {

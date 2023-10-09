@@ -45,14 +45,14 @@ const deleteRecord = async (req, res) => {
 
         const deliverydriversEx = await deliverydriversService.getdeliverydriversById(deliverydriversId);
         if (!deliverydriversEx) {
-            throw new Error("Delivery drivers detiles not found!");
+            throw new Error("Delivery driver detiles not found!");
         }
 
-        await newsService.deleteRecord(deliverydriversId);
+        await deliverydriversService.deleteRecode(deliverydriversId);
 
         res.status(200).json({
             success: true,
-            message: "Delivery drivers detiles delete successfully!",
+            message: "Delivery driver detiles delete successfully!",
         });
     } catch (error) {
         res.status(400).json({

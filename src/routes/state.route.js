@@ -6,7 +6,7 @@ const validate = require("../middlewares/validate");
 const router = express.Router();
 // create
 router.post(
-    "/create-start",
+    "/create-state",
     validate(stateValidation.createState),
     stateController.createState
 );
@@ -17,12 +17,12 @@ router.get(
 );
 // update
 router.put(
-    "/update-recode/:startId",
+    "/update-recode/:stateId",
     stateController.updateRecode
 );
 // delete
 router.delete(
-    "/delete-recode/:startId",
+    "/delete-recode/:stateId",
     stateController.deleteRecode
 );
 
