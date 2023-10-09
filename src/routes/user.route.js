@@ -23,6 +23,28 @@ router.get(
     userController.getAllUser
 );
 
+// create
+router.post(
+    "/create-state",
+    validate(userValidation.createUser),
+    userController.createUser
+);
+// list
+router.get(
+    "/list",
+    userController.userList
+);
+// update
+router.put(
+    "/update-recode/:userId",
+    userController.updateRecode
+);
+// delete
+router.delete(
+    "/delete-recode/:userId",
+    userController.deleteRecode
+);
+
 router.post(
     "/send-mail",
     validate(userValidation.sendMail),

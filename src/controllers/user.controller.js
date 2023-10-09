@@ -1,6 +1,7 @@
-const moment = require("moment");
 const { User } = require("../model")
+const joi = require("joi");
 const bcrypt = require("bcrypt");
+const moment = require("moment");
 const jwt = require("jsonwebtoken");
 const jwtSecrectKey = "SwdDtrfbmvhky76bfhgrDSsqwegdfv";
 const { userService, emailService } = require("../services");
@@ -45,6 +46,7 @@ const login = async (req, res) => {
 
         const successPassword = await bcrypt.compare(password, findUser.password);
         if (!successPassword) throw Error("Incorrect password");
+
         let option = {
             email,
             role: findUser.role,
@@ -79,6 +81,77 @@ const getAllUser = async (req, res) => {
         res.status(404).json({ error: error.message });
     }
 };
+
+// create state
+const createUser = async (req, res) => {
+    try {
+        const reqBody = req.body;
+
+        const User = await userService.createUser(reqBody);
+
+        res.status(200).json({
+            success: true,
+            message: "User Create Successfully!",
+            data: { User }
+        });
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
+
+//get state list
+const userList = async (req, res) => {
+    try {
+        const getList = await userService.userList();
+        res.status(200).json({
+            success: true,
+            message: "get User List successfully!",
+            data: { getList }
+        });
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
+
+// update state information
+const updateRecode = async (req, res) => {
+    try {
+        const userId = req.params.userId;
+
+        const stateEx = await userService.getUserById(userId);
+        if (!stateEx) {
+            throw new Error("User Not Found");
+        };
+
+        await userService.updateRecode(userId, req.body);
+        res.status(200).json({
+            success: true,
+            message: "User Details Update Successfully!",
+        });
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
+
+// delete state information
+const deleteRecode = async (req, res) => {
+    try {
+        const userId = req.params.userId;
+
+        const stateEx = await userService.getUserById(userId);
+        if (!stateEx) {
+            throw new Error("User details not found")
+        }
+        await userService.deleteRecode(userId);
+        res.status(200).json({
+            success: true,
+            message: "User details delete successfully!"
+        });
+    } catch (error) {
+        res.status(400).json({ success: false, message: error.message });
+    }
+};
+
 // semd maile
 const sendMail = async (req, res) => {
     try {
@@ -103,5 +176,9 @@ module.exports = {
     register,
     login,
     getAllUser,
+    createUser,
+    userList,
+    updateRecode,
+    deleteRecode,
     sendMail
 };
