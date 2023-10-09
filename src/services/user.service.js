@@ -6,15 +6,15 @@ const { User } = require("../model");
  * @returns {Promise<User>}
  */
 
-const createUser = async (body) => {
-    return User.create(body)
+const createUser = async (reqbody) => {
+    return User.create(reqbody)
 };
-const userList = async (email) => {
+const findUserByEmail = async (email) => {
     return User.findOne(email);
 };
 
-const findUserByEmail = async (_id, token) => {
-    return await User.findByIdAndUpdate(
+const findUserAndUpdate = async (_id, token) => {
+    return await User.findUserAndUpdate(
         { _id },
         {
             $set: { token },
@@ -29,7 +29,7 @@ const getAllUser = async (role) => {
 
 module.exports = {
     createUser,
-    userList,
     findUserByEmail,
+    findUserAndUpdate,
     getAllUser,
 };
