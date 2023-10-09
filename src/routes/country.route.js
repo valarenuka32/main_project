@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-country:countryId",
+    "/update-country/:countryId",
     countryController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-country:countryId",
+    "/delete-country/:countryId",
     countryController.deleteRecode
 );
 

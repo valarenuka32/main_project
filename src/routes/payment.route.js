@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-payment:paymentId",
+    "/update-payment/:paymentId",
     paymentController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-payment:paymentId",
+    "/delete-payment/:paymentId",
     paymentController.deleteRecode
 );
 

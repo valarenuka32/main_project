@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-cart:cartId",
+    "/update-cart/:cartId",
     cartController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-cart:cartId",
+    "/delete-cart/:cartId",
     cartController.deleteRecode
 );
 

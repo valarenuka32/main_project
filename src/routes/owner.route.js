@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-owner:ownerId",
+    "/update-owner/:ownerId",
     ownerController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-owner:ownerId",
+    "/delete-owner/:ownerId",
     ownerController.deleteRecode
 );
 

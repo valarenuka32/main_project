@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update:restaurantId",
+    "/update/:restaurantId",
     restaurantController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-recode:restaurantId",
+    "/delete-recode/:restaurantId",
     restaurantController.deleteRecode
 );
 module.exports = router;

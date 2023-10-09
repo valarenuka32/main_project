@@ -19,12 +19,12 @@ router.get(
 
 // update
 router.put(
-    "/update-orderitem:orderitemId",
+    "/update-orderitem/:orderitemId",
     orderitemController.updateRecode
 );
 // delete
 router.delete(
-    "/delete-orderitem:orderitemId",
+    "/delete-orderitem/:orderitemId",
     orderitemController.deleteRecode
 );
 

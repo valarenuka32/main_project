@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-city:cityId",
+    "/update-city/:cityId",
     cityController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-city:cityId",
+    "/delete-city/:cityId",
     cityController.deleteRecode
 );
 

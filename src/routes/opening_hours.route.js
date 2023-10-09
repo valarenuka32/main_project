@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-openinghours:openinghoursId",
+    "/update-openinghours/:openinghoursId",
     openinghoursController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-openinghours:openinghoursId",
+    "/delete-openinghours/:openinghoursId",
     openinghoursController.deleteRecode
 );
 

@@ -22,13 +22,13 @@ router.get(
 
 // update
 router.put(
-    "/update-restaurant_img:imageId",
+    "/update-restaurant_img/:imageId",
     imageController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-restaurant_img:imageId",
+    "/delete-restaurant_img/:imageId",
     imageController.deleteRecode
 );
 

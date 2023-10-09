@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-deliveryaddresses:deliveryaddressesId",
+    "/update-deliveryaddresses/:deliveryaddressesId",
     deliveryaddressesController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-deliveryaddresses:deliveryaddressesId",
+    "/delete-deliveryaddresses/:deliveryaddressesId",
     deliveryaddressesController.deleteRecode
 );
 

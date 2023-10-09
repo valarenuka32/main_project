@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-review:reviewId",
+    "/update-review/:reviewId",
     reviewController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-review:reviewId",
+    "/delete-review/:reviewId",
     reviewController.deleteRecode
 );
 

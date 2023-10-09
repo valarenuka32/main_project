@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-comment:commentId",
+    "/update-comment/:commentId",
     commentController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-comment:commentId",
+    "/delete-comment/:commentId",
     commentController.deleteRecode
 );
 

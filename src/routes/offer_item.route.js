@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-offeritem:offeritemId",
+    "/update-offeritem/:offeritemId",
     offeritemController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-offeritem:offeritemId",
+    "/delete-offeritem/:offeritemId",
     offeritemController.deleteRecode
 );
 

@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-notification:notificationId",
+    "/update-notification/:notificationId",
     notificationController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-notification:notificationId",
+    "/delete-notification/:notificationId",
     notificationController.deleteRecode
 );
 

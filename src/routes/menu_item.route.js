@@ -19,12 +19,12 @@ router.get(
 
 // update
 router.put(
-    "/update-menuitem:menuitemId",
+    "/update-menuitem/:menuitemId",
     menuitemController.updateRecode
 );
 // delete
 router.delete(
-    "/delete-menuitem:menuitemId",
+    "/delete-menuitem/:menuitemId",
     menuitemController.deleteRecode
 );
 

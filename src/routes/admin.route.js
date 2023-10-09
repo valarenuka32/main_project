@@ -20,13 +20,13 @@ router.get(
 
 // update
 router.put(
-    "/update-admin:adminId",
+    "/update-admin/:adminId",
     adminController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-admin:adminId",
+    "/delete-admin/:adminId",
     adminController.deleteRecode
 );
 
