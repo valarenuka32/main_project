@@ -10,10 +10,6 @@ const orderSchema = new mongoose.Schema(
             type: Number,
             default: 0,
         },
-        status: {
-            type: String,
-            trim: true,
-        },
         User: {
             type: mongoose.Types.ObjectId,
             ref: "User",
