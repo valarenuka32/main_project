@@ -1,78 +1,93 @@
 const { deliverydriversService } = require("../services");
 
-// create
+/** create news */
 const createDeliveryDrivers = async (req, res) => {
     try {
         const reqBody = req.body;
+        console.log(reqBody);
+
+        // const newsEx = await newsService.getnewsByName(reqBody.first_name);
+        // if (newsEx) {
+        //     throw new Error(`please add other news this ${newsEx.first_name} news already created`);
+        // }
 
         const deliverydrivers = await deliverydriversService.createDeliveryDrivers(reqBody);
+
         res.status(200).json({
             success: true,
-            message: "Delivery drivers create successfully!",
+            message: "deliverydrivers detiles create successfully!",
             data: { deliverydrivers },
-        })
+        });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
     }
 };
 
-// get opening hours list
+// get news list
 const deliveryDriversList = async (req, res) => {
     try {
         const getList = await deliverydriversService.deliveryDriversList();
+
         res.status(200).json({
             success: true,
             message: "Get delivery drivers list successfully!",
-            data: { getList }
-        })
+            data: getList
+        });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
     }
 };
 
-// update
+// // delete list
+const deleteRecord = async (req, res) => {
+    try {
+        const deliverydriversId = req.params.deliverydriversId;
+        const deliverydriversEx = await deliverydriversService.getdeliverydriversById(deliverydriversId);
+        if (!deliverydriversEx) {
+            throw new Error("news detiles not found!");
+        }
+
+        await newsService.deleteRecord(deliverydriversId);
+
+        res.status(200).json({
+            success: true,
+            message: "news detiles delete successfully!",
+        });
+    } catch (error) {
+        res.status(400).json({
+            success: false,
+            message: error.message,
+        });
+    }
+};
+
+// // update detiles
 const updateRecode = async (req, res) => {
     try {
         const deliverydriversId = req.params.deliverydriversId;
 
         const deliverydriversEx = await deliverydriversService.getdeliverydriversById(deliverydriversId);
         if (!deliverydriversEx) {
-            throw new Error("Delivery drivers not found");
+            throw new Error("delivery drivers not found!");
         }
 
         await deliverydriversService.updateRecode(deliverydriversId, req.body);
+
         res.status(200).json({
             success: true,
-            message: "Delivery drivers detiles update successfully!"
+            message: "delivery drivers details update successfully!",
         });
     } catch (error) {
-        res.status(400).json({ success: false, message: error.message });
-    }
-};
-
-// delete
-const deleteRecode = async (req, res) => {
-    try {
-        const deliverydriversId = req.params.deliverydriversId;
-
-        const deliverydriversEx = await deliverydriversService.getdeliverydriversById(deliverydriversId);
-        if (!deliverydriversEx) {
-            throw new Error("Delivery drivers not found");
-        };
-
-        await deliverydriversService.deleteRecode(deliverydriversId, req.body);
-        res.status(200).json({
-            success: true,
-            message: "Delivery drivers detiles delete successfully !"
+        res.status(400).json({
+            success: false,
+            message: error.message,
         });
-    } catch (error) {
-        res.status(400).json({ success: false, message: error.message });
     }
 };
-
 module.exports = {
     createDeliveryDrivers,
     deliveryDriversList,
-    updateRecode,
-    deleteRecode
+    deleteRecord,
+    updateRecode
 };
+

@@ -20,14 +20,14 @@ router.get(
 
 // update
 router.put(
-    "/update-deliverydrivers:deliverydriversId",
+    "/update/:deliverydriversId",
     deliverydriversController.updateRecode
 );
 
 // delete
 router.delete(
-    "/delete-deliverydrivers:deliverydriversId",
-    deliverydriversController.deleteRecode
+    "/delete/:deliverydriversId",
+    deliverydriversController.deleteRecord
 );
 
 module.exports = router;
