@@ -34,7 +34,7 @@ const stateList = async (req, res) => {
 // update state information
 const updateRecode = async (req, res) => {
     try {
-        const stateId = res.params.stateId;
+        const stateId = req.params.stateId;
 
         const stateEx = await stateService.getStateById(stateId);
         if (!stateEx) {
@@ -51,10 +51,10 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete state data
+// delete state information
 const deleteRecode = async (req, res) => {
     try {
-        const stateId = res.params.stateId;
+        const stateId = req.params.stateId;
 
         const stateEx = await stateService.getStateById(stateId);
         if (!stateEx) {

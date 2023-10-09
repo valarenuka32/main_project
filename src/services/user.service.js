@@ -7,10 +7,10 @@ const { User } = require("../model");
  */
 
 const createUser = async (reqbody) => {
-    return User.create(reqbody)
+    return await User.create(reqbody)
 };
 const findUserByEmail = async (email) => {
-    return User.findOne(email);
+    return await User.findOne(email);
 };
 
 const findUserAndUpdate = async (_id, token) => {
