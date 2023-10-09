@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const moment = require("moment");
 const jwt = require("jsonwebtoken");
 const jwtSecrectKey = "SwdDtrfbmvhky76bfhgrDSsqwegdfv";
+const ejs = require("ejs");
 const { userService, emailService } = require("../services");
 const { auth } = require("../middlewares/auth");
 
