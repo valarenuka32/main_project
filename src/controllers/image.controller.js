@@ -36,7 +36,7 @@ const imageList = async (req, res) => {
     }
 };
 
-// update
+// update image
 const updateRecode = async (req, res) => {
     try {
         const reqBody = req.Body;
@@ -74,7 +74,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete image
 const deleteRecode = async (req, res) => {
     try {
         const imageId = res.params.imageId;

@@ -1,6 +1,7 @@
 const { deliveryaddressesService } = require("../services");
 
 // create
+
 const createDeliveryAddresses = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -16,7 +17,8 @@ const createDeliveryAddresses = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get delivery addresses list
+
 const deliveryAddressesList = async (req, res) => {
     try {
         const getList = await deliveryaddressesService.deliveryAddressesList();
@@ -30,7 +32,8 @@ const deliveryAddressesList = async (req, res) => {
     }
 };
 
-// update
+// update delivery addresses
+
 const updateRecode = async (req, res) => {
     try {
         const deliveryaddressesId = req.params.deliveryaddressesId;
@@ -50,7 +53,8 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete delivery addresses
+
 const deleteRecode = async (req, res) => {
     try {
         const deliveryaddressesId = req.params.deliveryaddressesId;

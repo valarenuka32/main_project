@@ -30,10 +30,12 @@ const itemList = async (req, res) => {
         res.status(400).json({ success: false, message: error.message });
     }
 };
+
 // update
 const updateRecode = async (req, res) => {
     try {
         const itemId = req.params.itemId;
+
         const itemEx = await itemService.getitemById(itemId);
         if (!itemEx) {
             throw new Error("Item not found");
@@ -53,6 +55,7 @@ const updateRecode = async (req, res) => {
 const deleteRecode = async (req, res) => {
     try {
         const itemId = req.params.itemId;
+
         const itemEx = await itemService.getitemById(itemId);
         if (!itemEx) {
             throw new Error("Item not found");
@@ -67,6 +70,7 @@ const deleteRecode = async (req, res) => {
         res.status(400).json({ success: false, message: error.message });
     }
 };
+
 module.exports = {
     createItem,
     itemList,

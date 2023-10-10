@@ -16,7 +16,7 @@ const createReview = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get review list
 const reviewList = async (req, res) => {
     try {
         const getList = await reviewService.reviewList();
@@ -30,7 +30,7 @@ const reviewList = async (req, res) => {
     }
 };
 
-// update
+// update review
 const updateRecode = async (req, res) => {
     try {
         const reviewId = req.params.reviewId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete reviwe
 const deleteRecode = async (req, res) => {
     try {
         const reviewId = req.params.reviewId;

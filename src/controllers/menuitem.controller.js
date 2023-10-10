@@ -30,10 +30,12 @@ const menuitemList = async (req, res) => {
         res.status(400).json({ success: false, message: error.message });
     }
 };
-// update
+
+// update menuitem
 const updateRecode = async (req, res) => {
     try {
         const menuitemId = req.params.menuitemId;
+
         const menuitemEx = await menuitemService.getmenuitemById(menuitemId);
         if (!menuitemEx) {
             throw new Error("Menuitem not found");
@@ -53,6 +55,7 @@ const updateRecode = async (req, res) => {
 const deleteRecode = async (req, res) => {
     try {
         const menuitemId = req.params.menuitemId;
+
         const menuitemEx = await menuitemService.getmenuitemById(menuitemId);
         if (!menuitemEx) {
             throw new Error("Menuitem not found");

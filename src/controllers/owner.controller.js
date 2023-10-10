@@ -16,7 +16,7 @@ const createOwner = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get owner list
 const ownerList = async (req, res) => {
     try {
         const getList = await ownerService.ownerList();
@@ -30,7 +30,7 @@ const ownerList = async (req, res) => {
     }
 };
 
-// update
+// update owner detiles
 const updateRecode = async (req, res) => {
     try {
         const ownerId = req.params.ownerId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete owner detiles
 const deleteRecode = async (req, res) => {
     try {
         const ownerId = req.params.ownerId;

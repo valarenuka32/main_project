@@ -16,7 +16,7 @@ const createOfferitem = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get offer list
 const offeritemList = async (req, res) => {
     try {
         const getList = await offeritemService.offeritemList();
@@ -30,7 +30,7 @@ const offeritemList = async (req, res) => {
     }
 };
 
-// update
+// update offer item detiles
 const updateRecode = async (req, res) => {
     try {
         const offeritemId = req.params.offeritemId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete offer item detiles
 const deleteRecode = async (req, res) => {
     try {
         const offeritemId = req.params.offeritemId;

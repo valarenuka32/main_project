@@ -1,15 +1,11 @@
 const { deliverydriversService } = require("../services");
 
-/** create news */
+// create deliverydrivers
+
 const createDeliveryDrivers = async (req, res) => {
     try {
         const reqBody = req.body;
         console.log(reqBody);
-
-        // const newsEx = await newsService.getnewsByName(reqBody.first_name);
-        // if (newsEx) {
-        //     throw new Error(`please add other news this ${newsEx.first_name} news already created`);
-        // }
 
         const deliverydrivers = await deliverydriversService.createDeliveryDrivers(reqBody);
 
@@ -23,7 +19,8 @@ const createDeliveryDrivers = async (req, res) => {
     }
 };
 
-// get news list
+// get delivery drivers list
+
 const deliveryDriversList = async (req, res) => {
     try {
         const getList = await deliverydriversService.deliveryDriversList();
@@ -38,7 +35,8 @@ const deliveryDriversList = async (req, res) => {
     }
 };
 
-// // delete list
+// delete delivery drivers list
+
 const deleteRecord = async (req, res) => {
     try {
         const deliverydriversId = req.params.deliverydriversId;
@@ -62,7 +60,7 @@ const deleteRecord = async (req, res) => {
     }
 };
 
-// // update detiles
+// update delivery drivers detiles
 const updateRecode = async (req, res) => {
     try {
         const deliverydriversId = req.params.deliverydriversId;
@@ -85,6 +83,7 @@ const updateRecode = async (req, res) => {
         });
     }
 };
+
 module.exports = {
     createDeliveryDrivers,
     deliveryDriversList,
