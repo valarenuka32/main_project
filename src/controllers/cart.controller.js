@@ -16,7 +16,7 @@ const createCart = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get cart list
 const cartList = async (req, res) => {
     try {
         const getList = await cartService.cartList();
@@ -30,7 +30,7 @@ const cartList = async (req, res) => {
     }
 };
 
-// update
+// update cart detiles
 const updateRecode = async (req, res) => {
     try {
         const cartId = req.params.cartId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete cart detiles
 const deleteRecode = async (req, res) => {
     try {
         const cartId = req.params.cartId;
