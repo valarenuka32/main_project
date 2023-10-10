@@ -9,7 +9,7 @@ const routes = require("./routes");
 require("./helpers/crons");
 
 // database connection
-connectDB()
+connectDB();
 
 const app = express();
 

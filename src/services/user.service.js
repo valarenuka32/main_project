@@ -6,8 +6,8 @@ const { User } = require("../model");
  * @returns {Promise<User>}
  */
 
-const createUser = async (reqbody) => {
-    return await User.create(reqbody);
+const createUser = async (body) => {
+    return await User.create(body);
 };
 
 const findUserByEmail = async (email) => {

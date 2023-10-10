@@ -13,12 +13,12 @@ const register = async (req, res) => {
 
     const { email, password, role } = req.body;
 
-    const hashPassword = await bcrypt.hash(password, 8);
+    // const hashPassword = await bcrypt.hash(password, 8);
 
     let option = {
         email,
         role,
-        exp: moment().add(1, "days").unix(),
+        // exp: moment().add(1, "days").unix(),
     };
 
     const token = await jwt.sign(option, jwtSecrectKey);
@@ -26,7 +26,7 @@ const register = async (req, res) => {
     const filter = {
         email,
         role,
-        password: hashPassword,
+        // password: hashPassword,
         token,
     };
 
