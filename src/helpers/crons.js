@@ -30,22 +30,22 @@ new CronJob(
     "Asia/Kolkata"
 ).start();
 
-// Multiple email send
-new CronJob(
-    "39 7 * * *",
-    async () => {
-        const userDetails = await userService.userList();
-        const userEmail = [];
-        for (let ele of userDetails) {
-            userEmail.push(ele.email);
-        }
-        await emailService.sendMail(
-            userEmail,
-            "Blasing message",
-            "Good morning Renuka,Have a great day"
-        );
-    },
-    null,
-    false,
-    "Asia/Kolkata"
-).start();
+// // Multiple email send
+// new CronJob(
+//     "39 7 * * *",
+//     async () => {
+//         const userDetails = await userService.userList();
+//         const userEmail = [];
+//         for (let ele of userDetails) {
+//             userEmail.push(ele.email);
+//         }
+//         await emailService.sendMail(
+//             userEmail,
+//             "Blasing message",
+//             "Good morning Renuka,Have a great day"
+//         );
+//     },
+//     null,
+//     false,
+//     "Asia/Kolkata"
+// ).start();
