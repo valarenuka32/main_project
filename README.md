@@ -87,10 +87,4 @@ This project is seasoned with the MIT License. For the full recipe, see the LICE
 Acknowledgments 🙏
 Thanks to Zomato for the generous API offerings.
 Special gratitude to the Node.js community for crafting delightful packages and libraries.
-Got questions or need assistance? Reach out to our 24/7 helpline. Enjoy your coding journey! 🍻
-
-
-Feel free to replace `[repository_url]`, `YOUR_ZOMATO_API_KEY`, `YOUR_EMAIL_ADDRESS`, and `YOUR_EMAIL_PASSWORD` with your actual values, and further customize the README file as per your project's structure and preferences. Enjoy coding! 🎉🍽️👨‍🍳
-
-
 
