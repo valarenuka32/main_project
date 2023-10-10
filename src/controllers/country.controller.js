@@ -22,7 +22,7 @@ const countryList = async (req, res) => {
         const getList = await countryService.countryList();
         res.status(200).json({
             success: true,
-            message: "Get country list successfully!",
+            message: "Get Country list successfully!",
             data: { getList }
         })
     } catch (error) {
@@ -37,13 +37,13 @@ const updateRecode = async (req, res) => {
 
         const countryEx = await countryService.getcountryById(countryId);
         if (!countryEx) {
-            throw new Error("country not found");
+            throw new Error("Country not found");
         }
 
         await countryService.updateRecode(countryId, req.body);
         res.status(200).json({
             success: true,
-            message: "country detiles update successfully!"
+            message: "Country detiles update successfully!"
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
@@ -57,13 +57,13 @@ const deleteRecode = async (req, res) => {
 
         const countryEx = await countryService.getcountryById(countryId);
         if (!countryEx) {
-            throw new Error("country not found");
+            throw new Error("Country not found");
         };
 
         await countryService.deleteRecode(countryId, req.body);
         res.status(200).json({
             success: true,
-            message: "country detiles delete successfully !"
+            message: "Country detiles delete successfully !"
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });

@@ -1,6 +1,6 @@
 const { cityService } = require("../services");
 
-// create
+// create city
 const createCity = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -16,7 +16,7 @@ const createCity = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get city list
 const cityList = async (req, res) => {
     try {
         const getList = await cityService.cityList();
@@ -30,40 +30,40 @@ const cityList = async (req, res) => {
     }
 };
 
-// update
+// update city detailes
 const updateRecode = async (req, res) => {
     try {
         const cityId = req.params.cityId;
 
         const cityEx = await cityService.getcityById(cityId);
         if (!cityEx) {
-            throw new Error("city not found");
+            throw new Error("City not found");
         }
 
         await cityService.updateRecode(cityId, req.body);
         res.status(200).json({
             success: true,
-            message: "city detiles update successfully!"
+            message: "City detiles update successfully!"
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });
     }
 };
 
-// delete
+// delete city list
 const deleteRecode = async (req, res) => {
     try {
         const cityId = req.params.cityId;
 
         const cityEx = await cityService.getcityById(cityId);
         if (!cityEx) {
-            throw new Error("city not found");
+            throw new Error("City not found");
         };
 
         await cityService.deleteRecode(cityId, req.body);
         res.status(200).json({
             success: true,
-            message: "city detiles delete successfully !"
+            message: "City detiles delete successfully !"
         });
     } catch (error) {
         res.status(400).json({ success: false, message: error.message });

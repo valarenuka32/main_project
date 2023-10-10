@@ -16,7 +16,7 @@ const createComment = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get comment list
 const commentList = async (req, res) => {
     try {
         const getList = await commentService.commentList();
