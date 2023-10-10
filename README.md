@@ -13,6 +13,21 @@ Before diving into the culinary world of this application, please ensure you've 
 
 - **Email Credentials**: If you plan to use Node Mailer for sending emails, have your email address and credentials ready. Replace `YOUR_EMAIL_ADDRESS` and `YOUR_EMAIL_PASSWORD` with your actual email and password.
 
+
+Zomato 🍽️🥂🍰
+
+Zomato is your ultimate foodie companion! 🍔🍕🌮
+
+Discover the best restaurants in town, browse mouthwatering menus 📜, and order delectable dishes 🚀 for delivery or pickup. Whether you're craving spicy 🌶️ Indian curry, cheesy 🧀 Italian pasta, or a classic 🍔 burger, Zomato's got you covered.
+
+🌟 Key Features:
+📍 Find restaurants near you with easy-to-use location-based search
+📸 View mouthwatering food photos and tempting reviews
+📦 Order food online and get it delivered to your doorstep
+🚗 Track your food delivery in real-time
+🕑 Reserve a table for a special dining experience
+💰 Discover amazing discounts and deals
+👥 Connect with fellow food enthusiasts and share your culinary adventures
 ## Installation 🚀
 
 1. Clone the repository to your local kitchen:
@@ -44,21 +59,6 @@ Create user-specific API routes for regular users. Define routes and controllers
 
 👑 Admin Routes
 Add a touch of luxury with admin-specific API routes. Define admin routes and controllers in the adminRoutes/ directory.
-
-Zomato 🍽️🥂🍰
-
-Zomato is your ultimate foodie companion! 🍔🍕🌮
-
-Discover the best restaurants in town, browse mouthwatering menus 📜, and order delectable dishes 🚀 for delivery or pickup. Whether you're craving spicy 🌶️ Indian curry, cheesy 🧀 Italian pasta, or a classic 🍔 burger, Zomato's got you covered.
-
-🌟 Key Features:
-📍 Find restaurants near you with easy-to-use location-based search
-📸 View mouthwatering food photos and tempting reviews
-📦 Order food online and get it delivered to your doorstep
-🚗 Track your food delivery in real-time
-🕑 Reserve a table for a special dining experience
-💰 Discover amazing discounts and deals
-👥 Connect with fellow food enthusiasts and share your culinary adventures
 
 Usage 🍽️
 To savor these features, explore the following files and directories:
