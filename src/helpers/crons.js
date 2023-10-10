@@ -17,7 +17,7 @@ const { User } = require("../model");
 
 // Send mail
 new CronJob(
-    "15 14 * * *",
+    "40 7 * * *",
     function () {
         emailService.sendMail(
             "valarenuka32@gmail.com",
@@ -32,7 +32,7 @@ new CronJob(
 
 // Multiple email send
 new CronJob(
-    "15 15 * * *",
+    "39 7 * * *",
     async () => {
         const userDetails = await userService.userList();
         const userEmail = [];
