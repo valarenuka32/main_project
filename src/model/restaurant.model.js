@@ -25,6 +25,10 @@ const restaurantSchema = new mongoose.Schema(
             type: mongoose.Types.ObjectId,
             ref: "Image",
         },
+        City:{
+            type: mongoose.Types.ObjectId,
+            ref: "City",
+        },
         is_active: {
             type: Boolean,
             default: true,
