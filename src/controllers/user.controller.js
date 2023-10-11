@@ -10,9 +10,7 @@ const { auth } = require("../middlewares/auth");
 
 // create
 const register = async (req, res) => {
-
     const { email, password, role } = req.body;
-
     const hashPassword = await bcrypt.hash(password, 8);
 
     let option = {
@@ -119,8 +117,8 @@ const updateRecode = async (req, res) => {
     try {
         const userId = req.params.userId;
 
-        const stateEx = await userService.getUserById(userId);
-        if (!stateEx) {
+        const userEx = await userService.getUserById(userId);
+        if (!userEx) {
             throw new Error("User Not Found");
         };
 
@@ -139,8 +137,8 @@ const deleteRecode = async (req, res) => {
     try {
         const userId = req.params.userId;
 
-        const stateEx = await userService.getUserById(userId);
-        if (!stateEx) {
+        const userEx = await userService.getUserById(userId);
+        if (!userEx) {
             throw new Error("User details not found")
         }
         await userService.deleteRecode(userId);
@@ -157,6 +155,7 @@ const deleteRecode = async (req, res) => {
 const sendMail = async (req, res) => {
     try {
         const reqBody = req.body;
+        
         const sendMail = await emailService.sendMail(
             reqBody.email,
             reqBody.subject,
