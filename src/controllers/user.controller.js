@@ -155,7 +155,7 @@ const deleteRecode = async (req, res) => {
 const sendMail = async (req, res) => {
     try {
         const reqBody = req.body;
-        
+
         const sendMail = await emailService.sendMail(
             reqBody.email,
             reqBody.subject,
