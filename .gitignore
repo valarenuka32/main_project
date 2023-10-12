@@ -1,2 +1,5 @@
-#node_model
-node_model
+# modules
+node_modules
+
+#lock file
+package-lock.json
