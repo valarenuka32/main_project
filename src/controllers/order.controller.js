@@ -30,7 +30,7 @@ const orderList = async (req, res) => {
         res.status(400).json({ success: false, message: error.message });
     }
 };
-// update
+// update order list
 const updateRecode = async (req, res) => {
     try {
         const orderId = req.params.orderId;
@@ -49,7 +49,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete order list
 const deleteRecode = async (req, res) => {
     try {
         const orderId = req.params.orderId;

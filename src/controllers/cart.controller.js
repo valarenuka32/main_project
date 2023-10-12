@@ -1,6 +1,6 @@
 const { cartService } = require("../services");
 
-// create
+// create cart
 const createCart = async (req, res) => {
     try {
         const reqBody = req.body;

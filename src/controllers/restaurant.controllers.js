@@ -16,7 +16,7 @@ const createRestaurant = async (req, res) => {
     }
 };
 
-//restaurant  list
+//get restaurant  list
 const restaurantList = async (req, res) => {
     try {
         const getlist = await restaurantService.restaurantList();
@@ -30,10 +30,11 @@ const restaurantList = async (req, res) => {
     }
 };
 
-// update
+// update restaurant list
 const updateRecode = async (req, res) => {
     try {
         const restaurantId = res.params.restaurantId;
+
         const restaurantEx = await restaurantService.getrestaurantById(restaurantId);
         if (!restaurantEx) {
             throw new Error("Restaurant not found")
@@ -48,10 +49,11 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete restaurant list
 const deleteRecode = async (req, res) => {
     try {
         const restaurantId = res.params.restaurantId;
+
         const restaurantEx = await restaurantService.getrestaurantById(restaurantId);
         if (!restaurantEx) {
             throw new Error("Restaurant detiles not found")

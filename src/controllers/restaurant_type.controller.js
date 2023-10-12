@@ -19,7 +19,7 @@ const createRestauranttype = async (req, res) => {
     }
 };
 
-// Restaurant type list
+//get restaurant type list
 const restauranttypeList = async (req, res) => {
     try {
         const getList = await restauranttypeService.restauranttypeList();
@@ -33,7 +33,7 @@ const restauranttypeList = async (req, res) => {
     }
 };
 
-// update
+// update restaurant type list
 const updateRecode = async (req, res) => {
     try {
         const restauranttypeId = res.params.restauranttypeId;
@@ -54,7 +54,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete restaurant type list
 const deleteRecode = async (req, res) => {
     try {
         const restauranttypeId = res.params.restauranttypeId;

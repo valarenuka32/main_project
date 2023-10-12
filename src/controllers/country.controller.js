@@ -1,6 +1,6 @@
 const { countryService } = require("../services");
 
-// create
+// create country
 const createCountry = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -30,7 +30,7 @@ const countryList = async (req, res) => {
     }
 };
 
-// update
+// update country details
 const updateRecode = async (req, res) => {
     try {
         const countryId = req.params.countryId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete country details
 const deleteRecode = async (req, res) => {
     try {
         const countryId = req.params.countryId;

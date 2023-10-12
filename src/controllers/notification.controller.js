@@ -16,7 +16,7 @@ const createNotification = async (req, res) => {
     }
 };
 
-// get opening hours list
+// get notification list
 const notificationList = async (req, res) => {
     try {
         const getList = await notificationService.notificationList();
@@ -30,7 +30,7 @@ const notificationList = async (req, res) => {
     }
 };
 
-// update
+// update notification list
 const updateRecode = async (req, res) => {
     try {
         const notificationId = req.params.notificationId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete notification list
 const deleteRecode = async (req, res) => {
     try {
         const notificationId = req.params.notificationId;

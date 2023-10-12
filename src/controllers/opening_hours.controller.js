@@ -30,7 +30,7 @@ const openinghoursList = async (req, res) => {
     }
 };
 
-// update
+// update opening hours details
 const updateRecode = async (req, res) => {
     try {
         const openinghoursId = req.params.openinghoursId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete opening hours details
 const deleteRecode = async (req, res) => {
     try {
         const openinghoursId = req.params.openinghoursId;

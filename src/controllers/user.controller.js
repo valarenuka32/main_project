@@ -8,7 +8,7 @@ const ejs = require("ejs");
 const { userService, emailService } = require("../services");
 const { auth } = require("../middlewares/auth");
 
-// create
+// user register
 const register = async (req, res) => {
     const { email, password, role } = req.body;
     const hashPassword = await bcrypt.hash(password, 8);
@@ -33,7 +33,7 @@ const register = async (req, res) => {
     res.status(200).json({ data });
 };
 
-// login
+//user login
 const login = async (req, res) => {
 
     try {
@@ -67,7 +67,7 @@ const login = async (req, res) => {
     }
 };
 
-// Get all user
+// get all user
 const getAllUser = async (req, res) => {
     try {
         console.log(req, headers.token, '');
@@ -98,7 +98,7 @@ const createUser = async (req, res) => {
     }
 };
 
-//get state list
+//get user list
 const userList = async (req, res) => {
     try {
         const getList = await userService.userList();
@@ -112,7 +112,7 @@ const userList = async (req, res) => {
     }
 };
 
-// update state information
+// update user details
 const updateRecode = async (req, res) => {
     try {
         const userId = req.params.userId;
@@ -132,7 +132,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete state information
+// delete user details
 const deleteRecode = async (req, res) => {
     try {
         const userId = req.params.userId;

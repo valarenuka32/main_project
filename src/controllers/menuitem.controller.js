@@ -31,7 +31,7 @@ const menuitemList = async (req, res) => {
     }
 };
 
-// update menuitem
+// update menu-item list
 const updateRecode = async (req, res) => {
     try {
         const menuitemId = req.params.menuitemId;
@@ -51,7 +51,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete menu-item list
 const deleteRecode = async (req, res) => {
     try {
         const menuitemId = req.params.menuitemId;

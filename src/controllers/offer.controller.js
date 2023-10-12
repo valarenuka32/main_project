@@ -30,7 +30,7 @@ const offerList = async (req, res) => {
     }
 };
 
-// update
+// update offer list
 const updateRecode = async (req, res) => {
     try {
         const offerId = req.params.offerId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete offer list
 const deleteRecode = async (req, res) => {
     try {
         const offerId = req.params.offerId;

@@ -31,7 +31,7 @@ const itemList = async (req, res) => {
     }
 };
 
-// update
+// update item list
 const updateRecode = async (req, res) => {
     try {
         const itemId = req.params.itemId;
@@ -51,7 +51,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete item list
 const deleteRecode = async (req, res) => {
     try {
         const itemId = req.params.itemId;

@@ -30,7 +30,7 @@ const reviewList = async (req, res) => {
     }
 };
 
-// update review
+// update review recode
 const updateRecode = async (req, res) => {
     try {
         const reviewId = req.params.reviewId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete reviwe
+// delete reviwe recode
 const deleteRecode = async (req, res) => {
     try {
         const reviewId = req.params.reviewId;
