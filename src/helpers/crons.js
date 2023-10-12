@@ -22,7 +22,7 @@ new CronJob(
         emailService.sendMail(
             "valarenuka32@gmail.com",
             "Blasing message",
-            "Good morning Renuka,Have a nice day"
+            "Good morning ,Have a nice day"
         );
     },
     null,

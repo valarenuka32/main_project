@@ -9,6 +9,7 @@ const { Notification } = require("../model");
 const createNotification = async (reqBody) => {
     return Notification.create(reqBody);
 };
+
 const notificationList = async (req, res) => {
     return Notification.find()
     .populate("User");

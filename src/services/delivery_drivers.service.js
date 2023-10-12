@@ -9,6 +9,7 @@ const { Deliverydrivers } = require("../model");
 const createDeliveryDrivers = async (reqBody) => {
     return Deliverydrivers.create(reqBody);
 };
+
 const deliveryDriversList = async (req, res) => {
     return Deliverydrivers.find();
 };

@@ -9,6 +9,7 @@ const { Payment } = require("../model");
 const createPayment = async (reqBody) => {
     return Payment.create(reqBody)
 };
+
 const paymentList = async (req, res) => {
     return Payment.find()
     .populate("User")

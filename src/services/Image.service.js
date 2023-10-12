@@ -9,6 +9,7 @@ const { Image } = require("../model");
 const createImage = async (reqBody) => {
     return Image.create(reqBody);
 };
+
 const imageList = async (req, res) => {
     return Restaurantimage.find();
 };

@@ -9,6 +9,7 @@ const { Owner } = require("../model");
 const createOwner = async (reqBody) => {
     return Owner.create(reqBody);
 };
+
 const ownerList = async (req, res) => {
     return Owner.find();
 };

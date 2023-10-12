@@ -14,6 +14,10 @@ const adminSchema = new mongoose.Schema(
             type: String,
             trim: true,
         },
+        password: {
+            type: String,
+            trim: true,
+        },
         phone_no: {
             type: Number,
         },

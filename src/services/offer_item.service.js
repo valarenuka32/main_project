@@ -9,6 +9,7 @@ const { Offeritem } = require("../model");
 const createOfferitem = async (reqBody) => {
     return Offeritem.create(reqBody);
 };
+
 const offeritemList = async (req, res) => {
     return Offeritem.find()
     .populate("Offer")

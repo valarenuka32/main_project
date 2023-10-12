@@ -9,6 +9,7 @@ const { Admin } = require("../model");
 const createAdmin = async (reqBody) => {
     return Admin.create(reqBody);
 };
+
 const adminList = async (req, res) => {
     return Admin.find()
     .populate("User");

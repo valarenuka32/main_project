@@ -9,6 +9,7 @@ const { Menuitem } = require("../model");
 const createMenuitem = async (reqBody) => {
     return Menuitem.create(reqBody);
 };
+
 const menuitemList = async (req, res) => {
     return Menuitem.find()
     .populate("Image");
