@@ -36,7 +36,8 @@ Discover the best restaurants in town, browse mouthwatering menus 📜, and orde
    git clone [repository_url]
 
 2. Head over to the project directory:
-  cd zomato-api-nodejs
+
+  cd ~/Desktop/zomato-api-nodejs
 
 3. Prep the pantry with the project dependencies:
  npm install
