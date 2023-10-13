@@ -1,6 +1,6 @@
 const { adminService } = require("../services");
 
-// create
+// create admin
 const createAdmin = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -30,7 +30,7 @@ const adminList = async (req, res) => {
     }
 };
 
-// update
+// update admin recode
 const updateRecode = async (req, res) => {
     try {
         const adminId = req.params.adminId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete admin recode
 const deleteRecode = async (req, res) => {
     try {
         const adminId = req.params.adminId;

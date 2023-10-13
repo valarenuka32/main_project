@@ -1,6 +1,6 @@
 const { deliverydriversService } = require("../services");
 
-// create deliverydrivers
+// create delivery driver
 
 const createDeliveryDrivers = async (req, res) => {
     try {

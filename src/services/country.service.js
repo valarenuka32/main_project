@@ -9,6 +9,7 @@ const { Country } = require("../model");
 const createCountry = async (reqBody) => {
     return Country.create(reqBody);
 };
+
 const countryList = async (req, res) => {
     return Country.find();
 };

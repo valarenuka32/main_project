@@ -29,7 +29,7 @@ const paymentList = async (req, res) => {
     }
 };
 
-// update
+// update payment list
 const updateRecode = async (req, res) => {
     try {
         const paymentId = req.params.paymentId;
@@ -47,7 +47,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete payment list
 const deleteRecode = async (req, res) => {
     try {
         const paymentId = res.params.paymentId;

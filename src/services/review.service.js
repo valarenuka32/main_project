@@ -9,6 +9,7 @@ const { Review } = require("../model");
 const createReview = async (reqBody) => {
     return Review.create(reqBody);
 };
+
 const reviewList = async (req, res) => {
     return Review.find()
     .populate("Restaurant")

@@ -9,6 +9,7 @@ const { DeliveryAddresses } = require("../model");
 const createDeliveryAddresses = async (reqBody) => {
     return DeliveryAddresses.create(reqBody);
 };
+
 const deliveryAddressesList = async (req, res) => {
     return DeliveryAddresses.find()
     .populate("User")

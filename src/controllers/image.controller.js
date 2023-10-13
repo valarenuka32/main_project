@@ -1,7 +1,6 @@
-const fs = require("fs");
 const { imageService } = require("../services");
 
-// create
+// create image
 const createImage = async (req, res) => {
     try {
         const reqBody = req.body;
@@ -41,6 +40,7 @@ const updateRecode = async (req, res) => {
     try {
         const reqBody = req.Body;
         const imageId = req.params.imageId;
+
         const imageEx = await imageService.getimageById(imageId);
         if (!imageEx) {
             throw new Error("Image is not Found");

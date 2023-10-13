@@ -9,6 +9,7 @@ const { Cart } = require("../model");
 const createCart = async (reqBody) => {
     return Cart.create(reqBody);
 };
+
 const cartList = async (req, res) => {
     return Cart.find()
     .populate("User");

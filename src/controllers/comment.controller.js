@@ -30,7 +30,7 @@ const commentList = async (req, res) => {
     }
 };
 
-// update
+// update comment details
 const updateRecode = async (req, res) => {
     try {
         const commentId = req.params.commentId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete comment details
 const deleteRecode = async (req, res) => {
     try {
         const commentId = req.params.commentId;

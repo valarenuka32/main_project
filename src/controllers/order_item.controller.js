@@ -30,7 +30,7 @@ const orderitemList = async (req, res) => {
     }
 };
 
-// update
+// update order item list
 const updateRecode = async (req, res) => {
     try {
         const orderitemId = req.params.orderitemId;
@@ -50,7 +50,7 @@ const updateRecode = async (req, res) => {
     }
 };
 
-// delete
+// delete order item list
 const deleteRecode = async (req, res) => {
     try {
         const orderitemId = req.params.orderitemId;

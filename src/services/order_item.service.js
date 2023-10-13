@@ -9,6 +9,7 @@ const { Orderitem } = require("../model");
 const createOrderitem = async (reqBody) => {
     return Orderitem.create(reqBody);
 };
+
 const orderitemList = async (req, res) => {
     return Orderitem.find()
     .populate("Order")

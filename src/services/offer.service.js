@@ -9,8 +9,9 @@ const { Offer } = require("../model");
 const createOffer = async (reqBody) => {
     return Offer.create(reqBody);
 };
+
 const offerList = async (req, res) => {
-    return Offer.find()
+    return Offer.find({$or:[{is_active:true}]})
     .populate("Restaurant");
 };
 

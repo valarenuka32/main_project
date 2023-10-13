@@ -9,6 +9,7 @@ const createRestaurant = {
         Owner: Joi.string().required(),
         Restauranttype: Joi.string().required(),
         Image: Joi.string().required(),
+        City: Joi.string().required(),
     })
 };
 module.exports = {

@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-// const bcrypt = require("bcrypt");
 
 const userSchema = new mongoose.Schema(
     {
@@ -25,6 +24,9 @@ const userSchema = new mongoose.Schema(
             type: String,
             enum: ["admin", "user", "subadmin"],
         },
+        token: {
+            type: String,
+        },
         is_active: {
             type: Boolean,
             default: false,
@@ -35,15 +37,6 @@ const userSchema = new mongoose.Schema(
         versionKey: false,
     }
 );
-
-// userSchema.pre("save", async function (next) {
-//     const user = this;
-
-//     if (user.isModified("password")) {
-//         user.password = bcrypt.hash(user.password, 8)
-//     }
-//     next();
-// });
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;

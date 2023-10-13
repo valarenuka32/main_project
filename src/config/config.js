@@ -19,7 +19,7 @@ const { value: envVars, error } = envVarsSchema
     .validate(process.env);
 
 if (error) {
-    console.log("config erroe:", error);
+    console.log("config error:", error);
 }
 
 module.exports = {
