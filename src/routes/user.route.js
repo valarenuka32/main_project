@@ -6,13 +6,13 @@ const { auth } = require("../middlewares/auth");
 
 const router = express.Router();
 
-// create
+// user register
 router.post(
     "/register",
     validate(userValidation.createUser),
     userController.register
 );
-
+//  user login
 router.post(
     "/login",
     userController.login
@@ -23,7 +23,7 @@ router.get(
     userController.getAllUser
 );
 
-// create
+// create user
 router.post(
     "/create-state",
     validate(userValidation.createUser),
@@ -44,7 +44,7 @@ router.delete(
     "/delete-recode/:userId",
     userController.deleteRecode
 );
-
+// send mail
 router.post(
     "/send-mail",
     validate(userValidation.sendMail),
