@@ -20,7 +20,7 @@ Zomato is your ultimate foodie companion! 🍔🍕🌮
 
 Discover the best restaurants in town, browse mouthwatering menus 📜, and order delectable dishes 🚀 for delivery or pickup. Whether you're craving spicy 🌶️ Indian curry, cheesy 🧀 Italian pasta, or a classic 🍔 burger, Zomato's got you covered.
 
-🌟 Key Features:
+🌟 Key Features:<br>
 📍 Find restaurants near you with easy-to-use location-based search<br>
 📸 View mouthwatering food photos and tempting reviews<br>
 📦 Order food online and get it delivered to your doorstep<br>
