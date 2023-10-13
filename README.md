@@ -39,8 +39,7 @@ Discover the best restaurants in town, browse mouthwatering menus 📜, and orde
   cd zomato-api-nodejs
 
 3. Prep the pantry with the project dependencies:
-```bash
- [npm install]
+ npm install
 
  Features 🍽️
 🚪 Authentication
