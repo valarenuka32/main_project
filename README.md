@@ -37,7 +37,8 @@ Discover the best restaurants in town, browse mouthwatering menus 📜, and orde
 
 2. Head over to the project directory:
 
-  cd ~/Desktop/zomato-api-nodejs
+bash
+cd ~/Desktop/zomato-api-nodejs
 
 3. Prep the pantry with the project dependencies:
  npm install
