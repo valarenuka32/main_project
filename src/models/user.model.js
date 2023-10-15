@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema(
         },
         is_active: {
             type: Boolean,
-            trim: true,
+            default: true,
         }
     },
     {
