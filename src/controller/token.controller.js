@@ -12,8 +12,8 @@ const generateToken = async (req, res) => {
 
         const saveToken = await tokenService.savaToken(reqBody);
         res.
-        status(200)
-        .json({ success: true, message: "token created!", data: saveToken })
+            status(200)
+            .json({ success: true, message: "token created!", data: saveToken })
     } catch (error) {
         res.status(400).json({
             success: false,
