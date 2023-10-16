@@ -4,10 +4,13 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const { connectDB } = require("./db/dbconnection");
 const config = require("./config/config");
+const routes=require("./routes");
 
 const app = express();
 
 connectDB();
+
+app.use("/v1",routes);
 
 app.use(bodyparser.urlencoded({ extended: true }));
 
