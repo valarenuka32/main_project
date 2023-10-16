@@ -5,7 +5,7 @@ const generateToken = async (req, res) => {
     try {
         const reqBody = req.body;
 
-        reqBody.expire_time = moment().add(10, "minutes");
+        // reqBody.expire_time = moment().add(10, "minutes");
 
         const token = await tokenService.generateToken(reqBody);
         reqBody.token = token;

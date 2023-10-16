@@ -6,15 +6,16 @@ const auth = () => async (req, res, next) => {
     try {
         const token = req.headers.authorization;
         if (!token) {
-            return next(new Error("please authenticate!"));
+            return next(new Error("please authenticate"))
         }
+
         const decoded = jwt.verify(
             token.replace("Bearer", ""),
             config.jwt.secret_key
         );
-
         if (!decoded) {
         }
+
         const user = await User.findOne({ _id: decoded.user });
         if (!user) {
             return next(new Error("please authenticate"));
