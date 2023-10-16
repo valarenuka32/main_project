@@ -7,6 +7,6 @@ const router = express.Router();
 
 router.use("/user", userRoute);
 router.use("/product", productRoute);
-router.use("/Token", tokenRoute);
+router.use("/token", tokenRoute);
 
 module.exports = router;
