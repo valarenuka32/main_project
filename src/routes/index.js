@@ -5,8 +5,8 @@ const adminRouter = require("./admin.route");
 
 const router = express.Router();
 
-app.use("/student", studentRouter);
-app.use("/feculty", fecultyRouter);
-app.use("/admin", adminRouter);
+router.use("/student", studentRouter);
+router.use("/feculty", fecultyRouter);
+router.use("/admin", adminRouter);
 
 module.exports = router;

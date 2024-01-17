@@ -8,6 +8,8 @@ const adminCreate = async (reqBody) => {
 
 const adminList = async (req, res) => {
     return admin.find()
+    .populate("feculty")
+    .populate("student")
 };
 
 const updateDetailes = async (adminId, updatebody) => {
