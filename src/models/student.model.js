@@ -8,11 +8,15 @@ const studentSchema = new mongoose.Schema(
         },
         s_class: {
             type: Number,
-            default:0,
+            default: 0,
         },
         s_gread: {
             type: String,
             trim: true
+        },
+        feculty: {
+            type: mongoose.Types.ObjectId,
+            ref: "feculty",
         },
         is_active: {
             type: Boolean,

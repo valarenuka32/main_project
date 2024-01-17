@@ -8,6 +8,7 @@ const studentCreate = async (reqBody) => {
 
 const studentList = async (req, res) => {
     return student.find()
+    .populate("feculty")
 };
 
 const updateDetailes = async (studentId, updatebody) => {
