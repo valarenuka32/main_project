@@ -22,9 +22,9 @@ const fecultySchema = new mongoose.Schema(
             type: Number,
             default: 0,
         },
-        student: {
+        admin: {
             type: mongoose.Types.ObjectId,
-            ref: "student",
+            ref: "admin",
         },
         is_active: {
             type: Boolean,

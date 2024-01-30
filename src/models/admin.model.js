@@ -10,13 +10,13 @@ const adminSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
-        feculty: {
-            type: mongoose.Types.ObjectId,
-            ref: "feculty",
+        password: {
+            type: String,
+            trim: true
         },
-        student: {
-            type: mongoose.Types.ObjectId,
-            ref: "student",
+        email: {
+            type: String,
+            trim: true
         },
         is_active: {
             type: Boolean,

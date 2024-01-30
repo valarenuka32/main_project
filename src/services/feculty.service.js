@@ -8,7 +8,7 @@ const fecultyCreate = async (reqBody) => {
 
 const fecultyList = async (req, res) => {
     return feculty.find()
-    .populate("student")
+    .populate("admin")
 };
 
 const updateDetailes = async (fecultyId, updatebody) => {
