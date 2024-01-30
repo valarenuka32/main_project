@@ -7,8 +7,8 @@ const studentSchema = new mongoose.Schema(
             trim: true
         },
         s_class: {
-            type: Number,
-            default: 0,
+            type: String,
+            default: A,
         },
         s_gread: {
             type: String,
