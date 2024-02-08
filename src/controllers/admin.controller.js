@@ -6,6 +6,7 @@ const createAdmin = async (req, res) => {
         const reqBody = req.body;
 
         const admin = await adminService.createAdmin(reqBody);
+
         res.status(200).json({
             success: true,
             message: "Admin create successfully!",

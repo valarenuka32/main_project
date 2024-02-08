@@ -9,7 +9,7 @@ const createDeliveryAddresses = async (req, res) => {
         const deliveryaddresses = await deliveryaddressesService.createDeliveryAddresses(reqBody);
         res.status(200).json({
             success: true,
-            message: "Delivery addresses create successfully!",
+            message: "Delivery addresses create successfully!..",
             data: { deliveryaddresses },
         })
     } catch (error) {

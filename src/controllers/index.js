@@ -21,4 +21,4 @@ module.exports.deliverydriversController = require("./delivery_drivers.controlle
 module.exports.deliveriesController = require("./deliveries.controller");
 module.exports.commentController = require("./comment.controller");
 module.exports.reviewController = require("./review.controller");
-module.exports.notificationController = require("./notification.controller");
+module.exports.notificationController =  require("./notification.controller");

@@ -8,7 +8,7 @@ const createDeliveries = async (req, res) => {
         const deliveries = await deliveriesService.createDeliveries(reqBody);
         res.status(200).json({
             success: true,
-            message: "Deliveries create successfully!",
+            message: "Deliveries create successfully!..",
             data: { deliveries },
         })
     } catch (error) {

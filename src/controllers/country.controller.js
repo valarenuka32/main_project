@@ -8,7 +8,7 @@ const createCountry = async (req, res) => {
         const country = await countryService.createCountry(reqBody);
         res.status(200).json({
             success: true,
-            message: "Country create successfully!",
+            message: "Country create successfully!..",
             data: { country },
         })
     } catch (error) {

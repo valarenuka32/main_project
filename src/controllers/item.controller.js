@@ -18,6 +18,7 @@ const createItem = async (req, res) => {
 };
 
 // get item list
+
 const itemList = async (req, res) => {
     try {
         const getList = await itemService.itemList();

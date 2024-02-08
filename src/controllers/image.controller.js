@@ -13,7 +13,7 @@ const createImage = async (req, res) => {
         const image = await imageService.createImage(reqBody);
         res.status(200).json({
             success: true,
-            message: " Image create successfully!",
+            message: " Image create successfully!..",
             data: { image }
         });
     } catch (error) {

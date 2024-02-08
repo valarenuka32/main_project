@@ -7,7 +7,7 @@ const auth = (token, roles) => {
     if (err || !roles.find((ele) => ele === decoded.role)) {
       console.log(decoded.role, 'decoded.role');
       console.log("err", err);
-      throw Error("You dont have permission");
+      throw Error("You dont have permission..");
     }
   });
 };

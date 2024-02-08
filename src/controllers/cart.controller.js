@@ -6,6 +6,7 @@ const createCart = async (req, res) => {
         const reqBody = req.body;
 
         const cart = await cartService.createCart(reqBody);
+
         res.status(200).json({
             success: true,
             message: "Cart create successfully!",

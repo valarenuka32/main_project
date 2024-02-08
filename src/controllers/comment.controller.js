@@ -6,6 +6,7 @@ const createComment = async (req, res) => {
         const reqBody = req.body;
 
         const comment = await commentService.createComment(reqBody);
+
         res.status(200).json({
             success: true,
             message: "Comment create successfully!",

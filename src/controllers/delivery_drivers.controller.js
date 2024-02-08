@@ -11,7 +11,7 @@ const createDeliveryDrivers = async (req, res) => {
 
         res.status(200).json({
             success: true,
-            message: "deliverydrivers detiles create successfully!",
+            message: "deliverydrivers detiles create successfully!..",
             data: { deliverydrivers },
         });
     } catch (error) {

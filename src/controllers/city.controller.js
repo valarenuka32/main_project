@@ -6,6 +6,7 @@ const createCity = async (req, res) => {
         const reqBody = req.body;
 
         const city = await cityService.createCity(reqBody);
+
         res.status(200).json({
             success: true,
             message: "City create successfully!",

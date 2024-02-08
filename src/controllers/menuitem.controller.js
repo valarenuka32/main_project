@@ -9,7 +9,7 @@ const createMenuitem = async (req, res) => {
         const menuitem = await menuitemService.createMenuitem(reqBody);
         res.status(200).json({
             success: true,
-            message: "Menuitem create successfully",
+            message: "Menuitem create successfully!",
             data: { menuitem },
         })
     } catch (error) {

@@ -8,7 +8,7 @@ const createNotification = async (req, res) => {
         const notification = await notificationService.createNotification(reqBody);
         res.status(200).json({
             success: true,
-            message: "Notification create successfully!",
+            message: "Notification create successfully!..",
             data: { notification },
         })
     } catch (error) {
