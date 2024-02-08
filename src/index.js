@@ -24,7 +24,7 @@ app.options("*", cors());
 // namespace
 app.use("/v1", routes);
 
-// server
+// http server
 const server = http.createServer(app);
 
 server.listen(config.port, () => {

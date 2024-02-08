@@ -5,14 +5,14 @@ const validate = require("../middlewares/validate");
 
 const router = express.Router();
 
-// create
+// create admin
 router.post(
     "/create-admin",
     validate(adminValidation.createAdmin),
     adminController.createAdmin
 );
 
-// list
+// admin list
 router.get(
     "/list",
     adminController.adminList

@@ -6,13 +6,14 @@ const { Admin } = require("../model");
  * @returns {Promise<User>}
  */
 
+
 const createAdmin = async (reqBody) => {
     return Admin.create(reqBody);
 };
 
 const adminList = async (req, res) => {
     return Admin.find()
-    .populate("User");
+        .populate("User");
 };
 
 const getadminById = async (adminId) => {
